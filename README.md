@@ -1,15 +1,15 @@
 # PHP: The Right Way
 
-## Overview
+## O vedere de ansamblu
 
 This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Acest website este un Jekyll project.
+* Fiecare sectiune si subsectiune sunt un fisier Markdown in `_posts/`.
+* Subsectiunile au `isChild: true` in "front matter"-ul lor.
+* Structura paginii si a navigatiei este generata automat.
 
-## Spread the Word!
+## Du vestea mai departe!
 
 _PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
 developers know where to find good information!
