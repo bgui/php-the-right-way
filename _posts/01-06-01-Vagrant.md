@@ -4,30 +4,31 @@ isChild: true
 
 ## Vagrant {#vagrant_title}
 
-Running your application on different environments in development and production can lead to strange bugs 
-popping up when you go live. It's also tricky to keep different development environments up to date with the same 
-version for all libraries used when working with a team of developers. 
+Rularea aplicatiei tale pe diferite medii in dezvoltare si productie poate duce catre aparitia unor bug-uri neobisnuite 
+atunci cand are loc lansarea aplicatiei. De asemenea este dificil sa pastrezi actualizate la zi diferite medii de 
+dezvoltare cu aceleasi versiuni ale tuturor bibliotecilor folosite atunci cand se lucreaza cu o echipa de dezvoltatori.
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you 
-should consider using a virtual machine. This sounds tricky, but using [Vagrant][vagrant] you can set up a simple 
-virtual machine with only a few steps. These base boxes can then be set up manually, or you can use "provisioning" 
-software such as [Puppet][puppet] or [Chef][chef] to do this for you. Provisioning the base box is a great way to 
-ensure that multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated 
-"set up" command lists. You can also "destroy" your base box and recreate it without many manual steps, making it
-easy to create a "fresh" installation.
+Daca dezvolti pe Windows si lansezi pe Linux (sau orice non-Windows) sau dezvolti in echipa ar trebui sa iei in calcul
+ folosirea unei masini virtuale. Suna complicat, dar folosind [Vagrant][vagrant] poti construi o masina virtuala simpla
+ cu numai cativa pasi. Aceste masini de baza pot fi configurate manual sau poti folosi "provisioning"-software cum sunt
+ [Puppet][puppet] sau [Chef][chef] care sa faca asta pentru tine.
+Initializarea masinii de baza e o metoda buna de a asigura ca mai multe masini sunt setate intr-o maniera identica si
+ elimina nevoia de a avea liste cu comenzi de configurare. De asemenea iti poti distruge masina de baza si o poti
+ recrea fara prea multi pasi manuali fiind astfel usor de a crea o instalare proaspata.
 
-Vagrant creates shared folders used to share your code between your host and your virtual machine, meaning you can 
-create and edit your files on your host machine and then run the code inside your virtual machine.
+Vagrant creeaza directoare comune folosite pentru a pastra in comun codul tau intre gazda si masina virtuala, insemnand
+ ca poti crea si edita fisiere pe masina gazda si apoi poti rula codul inauntru masinii virtuale.
 
-### A little help
+### Un pic de ajutor
 
-If you need a little help to start using Vagrant there are three services that might be useful:
+Daca ai nevoie de putin ajutor pentru a incepe sa folosesti Vagrant exista trei servicii ce ar putea fi utile:
 
-- [Rove][rove]: service that allows you to pregenerate typical Vagrant builds, PHP among the options. The
-  provisioning is made with Chef.
-- [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
-  local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
-- [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
+- [Rove][rove]: serviciu care permite sa iti pregenerezi configuratii Vagrant tipice, PHP numarandu-se printre optiuni.
+ Initializarea este facuta cu Chef.
+- [Puphpet][puphpet]: GUI simplu pentru a seta masini virtuale pentru dezvoltare PHP. **Foarte concentrat pe PHP**.
+ In afara masinilor virtuale locale, poate fi folosit si pentru a plasa la servicii cloud. Initializarea e facuta cu Puppet.
+- [Protobox][protobox]: este un nivel deasupra lui vagrant si un GUI web pentru a seta masini virtuale pentru dezvoltare
+ web. Un singur document YAML controleaza tot ce e instalat pe masina virtuala.
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/

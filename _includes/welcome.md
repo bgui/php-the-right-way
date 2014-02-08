@@ -1,50 +1,48 @@
 # Welcome
 
-There's a lot of outdated information on the Web that leads new PHP users astray, 
-propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read, 
-quick reference for PHP popular coding standards, links to authoritative tutorials 
-around the Web and what the contributors consider to be best practices at the present 
-time.
+Exista multa informatie perimata existenta pe Web care induce noii utilizatori PHP in eroare,
+propagand rai practici si cod nesigur. _PHP: The Right Way_ este o referinta rapida si usor de citit,
+pentru standarde populare de programare PHP, link-uri catre tutoriale cu autoritate de pe web si
+ceeace considera contributorii ca sunt cele mai bune practici in prezent.
 
-_There is no canonical way to use PHP_. This website aims to introduce new PHP 
-developers to some topics which they may not discover until it is too late, and aims 
-to give seasoned pros some fresh ideas on those topics they've been doing for years 
-without ever reconsidering. This website will also not tell you which tools to use, but 
-instead offer suggestions for multiple options, when possible explaining the differences 
-in approach and use-case. 
+_Nu exista o metoda canonica in a folosi PHP_. Acest website tinteste sa introduca noii
+dezvoltatori PHP unor noi subiecte pe care poate ei nu le-ar fi descoperit decat prea tarziu,
+si doreste sa dea profesionistilor idei proaspete legate de acele subiecte pe care ei le-au
+aplicat de ani de zile fara sa le mai reconsidere. Acest website nu iti va spune ce unelte sa
+folosesti dar iti va oferi sugestii de optiuni, explicand cand se poate diferentele de abordare
+si cazuri de utilizare.
 
-This is a living document and will continue to be updated with more helpful information 
-and examples as they become available.
+Acesta este un document "viu" si va continua sa fie actualizat cu exemple si informatii si mai utile
+pe masura ce ele devin disponibile.
 
-## Translations
+## Traduceri
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+_PHP: The Right Way_ e (sau va fi curand) tradus in diferite limbi:
 
-* [English](http://www.phptherightway.com)
-* Catalan (Link broken... we're looking into it)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese](http://ja.phptherightway.com)
-* [Korean](http://wafe.github.io/php-the-right-way/)
-* Italian (Link broken... we're looking into it)
-* [Polish](http://pl.phptherightway.com/)
-* [Portuguese](http://br.phptherightway.com/)
-* [Russian](http://getjump.github.io/ru-php-the-right-way)
-* Spanish (Link broken... we're looking into it)
-* [Ukrainian](http://iflista.github.com/php-the-right-way/)
-* [Bulgarian](http://bg.phptherightway.com/)
-* [German](http://rwetzlmayr.github.io/php-the-right-way/)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Engleza](http://www.phptherightway.com)
+* Catalana (Link defect... )
+* [Chineza](http://wulijun.github.com/php-the-right-way)
+* [Japoneza](http://ja.phptherightway.com)
+* [Coreana](http://wafe.github.io/php-the-right-way/)
+* Italiana (Link defect... )
+* [Poloneza](http://pl.phptherightway.com/)
+* [Portugheza](http://br.phptherightway.com/)
+* [Rusa](http://getjump.github.io/ru-php-the-right-way)
+* Spaniola (Link defect... )
+* [Ukraineana](http://iflista.github.com/php-the-right-way/)
+* [Bulgara](http://bg.phptherightway.com/)
+* [Germana](http://rwetzlmayr.github.io/php-the-right-way/)
+* [Turca](http://hkulekci.github.io/php-the-right-way/)
 
-## How to Contribute
+## Cum sa contribui
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+Ajuta-ne sa facem acest website cea mai buna resursa pentru noii programatori PHP! [Contribuie pe GitHub][1]
 
-## Spread the Word!
+## Du vestea mai departe!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+_PHP: The Right Way_ are imagini banner pe care le poti folosi pe websiteul tau. Arata-ti sustinerea si lasa-i pe dezvoltatorii PHP noi sa afle unde sa gaseasca informatii de calitate!
 
-[See Banner Images][2]
+[Vezi imagini banner][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
 [2]: /banners.html

@@ -1,35 +1,39 @@
-# Code Style Guide  {#code_style_guide_title}
+# Ghid stil cod  {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+Comunitatea PHP este mare, diversa, si este compusa din nenumarate biblioteci, framework-uri si componente. Este comun ca
+dezvoltatorii sa aleaga cateva dintre acestea si sa le combine intr-un singur proiect. E important ca, codul PHP sa adere
+(pe cat posibil) la un stil de programare comun pentru a fi usor pentru dezvoltatori sa amestece diferite biblioteci
+pentru proiectele lor.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related 
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These recommendations 
-are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, 
-etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
+[Framework Interop Group][fig] a propus si a probat o serie de recomandari de stil. Nu toate sunt legate de stilul codului
+dar acelea care sunt sunt [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] si [PSR-4][psr4]. Aceste recomandari sunt doar un set de reguli
+pe care unele proiecte precum Drupal, Zend, Symfony,  CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, etc au inceput sa le adopte. Le poti folosi
+in proiectele tale sau poti continua folosirea propriului stil personal.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one 
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, 
-and applications that implement the components can have consistency even when working with lots of third-party code. 
+Ideal ar fi sa scrii cod PHP care adera la un standard cunoscut. Aceasta ar putea fi orice combinatie de PSR-uri, sau unul
+dintre standardele de codare facute de PEAR sau Zend. Aceasta inseamna ca alti dezvoltatori pot citi si lucra cu codul tau cu usurinta,
+iar aplicatiile care implementeaza componente pot avea consecventa chiar si atunci cand lucreaza cu mult cod din terte parti.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Zend Coding Standards][zend-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
-like [Sublime Text 2][st-cs] to be given real time feedback. 
 
-Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
-conforms to these standards, saving you from fixing each problem by hand.
+* [Citeste despre PSR-0][psr0]
+* [Citeste despre PSR-1][psr1]
+* [Citeste despre PSR-2][psr2]
+* [Citeste despre PSR-4][psr4]
+* [Citeste despre standardele PEAR][pear-cs]
+* [Citeste despre standardele Zend][zend-cs]
+* [Citeste despre standardele Symfony][symfony-cs]
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
-by all current and future parties who may be working on the codebase.
+Poti folosi [PHP_CodeSniffer][phpcs] pentru a verifica codul fata de oricare din aceste recomandari, iar module plugin pentru
+editoarele de text precum [Sublime Text 2][st-cs] iti pot da indicii in timp real.
+
+Foloseste [PHP Coding Standards Fixer][phpcsfixer] al lui Fabien Potencier pentru a modifica automat sintaxa codului tau asa incat
+ea sa se conformeze acestor standarde salvandu-te pe tine de la rezolvarea fiecarei probleme manual.
+
+Engleza este preferata pentru toate numele de simboluri. Comentariile pot fi scrise in orice limba usor accesibila tuturor partilor ce vor
+lucra cu bucata de cod.
+
+
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md

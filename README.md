@@ -2,7 +2,7 @@
 
 ## O vedere de ansamblu
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Acesta este repository-ul GitHub Pages pentru proiectul _PHP: The Right Way_.
 
 * Acest website este un Jekyll project.
 * Fiecare sectiune si subsectiune sunt un fisier Markdown in `_posts/`.
@@ -11,69 +11,72 @@ This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
 ## Du vestea mai departe!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+_PHP: The Right Way_ are imagini banner pe care le poti folosi pe websiteul tau. Arata-ti sustinerea si lasa-i pe dezvoltatorii PHP noi sa afle unde sa gaseasca informatii de calitate!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[Vezi imagini banner](http://www.phptherightway.com/banners.html)
 
-## How to Contribute
+## Cum sa contribui
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+1. Fork si editeaza
+2. Instaleaza optional [Ruby](https://rvm.io/rvm/install/) cu gem-ul [Jekyll](https://github.com/mojombo/jekyll/) ca sa previzualizezi local
+3. Depune o cerere pull pentru a fi luata in considerare
 
-### Contributor Style Guide
+### Ghid de stil pentru contribuitori
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+1. Foloseste engleza americana (*numai in repo-ul primar englez*)
+2. Foloseste patru(4) spatii pentru ident; nu folosi tab-uri.
+3. Infasoara orice text la 120 de caractere.
+4. Mostrele de cod trebuie sa adere la PSR-1 sau superior.
 
-## Where
+## Unde
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Catalan] (http://ca.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese] (http://ja.phptherightway.com)
-* [Korean] (http://wafe.github.io/php-the-right-way)
-* [Italian] (http://it.phptherightway.com)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Russian] (http://getjump.github.io/ru-php-the-right-way)
-* [Spanish] (http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Bulgarian](http://bg.phptherightway.com)
-* [German] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Engleza](http://www.phptherightway.com)
+* [Catalana] (http://ca.phptherightway.com)
+* [Chineza](http://wulijun.github.com/php-the-right-way)
+* [Japoneza] (http://ja.phptherightway.com)
+* [Coreana] (http://wafe.github.io/php-the-right-way)
+* [Italiana] (http://it.phptherightway.com)
+* [Poloneza](http://pl.phptherightway.com)
+* [Portugheza](http://br.phptherightway.com)
+* [Rusa] (http://getjump.github.io/ru-php-the-right-way)
+* [Spaniola] (http://es.phptherightway.com)
+* [Ukraineana](http://iflista.github.com/php-the-right-way)
+* [Bulgara](http://bg.phptherightway.com)
+* [Germana] (http://rwetzlmayr.github.io/php-the-right-way)
+* [Turca](http://hkulekci.github.io/php-the-right-way/)
 
-### Translations
+### Traduceri
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+Daca esti interesat sa traduci _PHP: The Right Way_, cloneaza acest repo pe Github si publica varianta ta localizata pe propriul tau cont GitHub Pages. Noi vom pune legatura catre traducerea ta in documentul primar.
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+Pentru a evita fragmentarea si confuzia cititorilor, va rugam algeti una din urmatoarele optiuni:
 
-1. We link to your GitHub Pages fork with `[username].github.com/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. Noi linkam catre fork-ul tau din GitHub Pages cu  `[username].github.com/php-the-right-way`
+2. Noi linkam catre fork-ul tau din GitHub Pages cu un subdomeniu (e.g. "ro.phptherightway.com")
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+Daca folosesti un subdomeniu, introdu subdomeniul in fisierul `CNAME`, si cere-ne sa setam DNS pentru tine. Daca nu utilizezi un subdomeniu sterge fisierul `CNAME` cu totul altfel fork-ul tau nu se va construi cand va fi push-uit.
 
-## Why
+Cand traducerea ta e gata, deschide un issue pe Issue Tracker.
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
 
-## Who
+## De ce
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+Au avut loc multe discutii in ultima vreme despre cum ca comunitatea PHP nu are suficiente informatii credibile pentru programatorii noi in PHP. Acest repository incearca sa rezolve aceasta problema.
 
-### Collaborators
+
+## Cine
+
+Numele meu este [Josh Lockhart](http://twitter.com/codeguy). Sunt autorul [Slim Framework](http://www.slimframework.com/) si lucrez pentru [New Media Campaigns](http://www.newmediacampaigns.com/).
+
+
+### Colaboratori
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## License
+## Licenta
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)

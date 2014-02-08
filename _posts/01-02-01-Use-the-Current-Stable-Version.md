@@ -1,11 +1,11 @@
 ---
-title: Use the Current Stable Version (5.5)
+title: Foloseste versiunea stabila curenta (5.5)
 isChild: true
 ---
 
-## Use the Current Stable Version (5.5) {#use_the_current_stable_version_55_title}
+## Foloseste versiunea stabila curenta (5.5) {#use_the_current_stable_version_55_title}
 
-If you are just getting started with PHP make sure to start with the current stable release of [PHP 5.5][php-release]. PHP has made great strides adding powerful [new features](#language_highlights) over the last few years. Don't let the minor version number difference between 5.2 and 5.5 fool you, it represents _major_ improvements. If you are looking for a function or its usage, the documentation on the [php.net][php-docs] website will have the answer.
+Daca abia ai inceput cu PHP fii sigur ca incepi cu versiunea stabila curenta de [PHP 5.5][php-release]. PHP a facut mari progrese adaugand multe [noi functionalitati](#language_highlights) in ultimii cativa ani. Nu lasa diferenta de numar minor de versiune dintre 5.2 si 5.5 sa te pacaleasca, ea reprezinta imbunatatiri _majore_. Daca esti in cautarea unei functii sau a uzului sau, documentatia de pe website-ul [php.net][php-docs]va avea raspunsul.
 
 [php-release]: http://www.php.net/downloads.php
 [php-docs]: http://www.php.net/manual/en/
