@@ -2,55 +2,62 @@
 isChild: true
 ---
 
-## Command Line Interface {#command_line_interface_title}
+## Interfata linie de comanda {#command_line_interface_title}
 
-PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrivia.
+PHP a fost creat pentru scopul primar de a scrie aplicatii web, dar este de asemenea util
+pentru scrierea de scripturi pentru linia de comanda (CLI). Programele PHP de linie de comanda
+te pot ajuta sa automatizezi sarcini comune precum testarea, lansarea, si administratia aplicatiei.
 
-CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web GUI for it. Just be sure not to put your CLI PHP scripts in your public web root!
+Programele PHP CLI sunt puternice pentru ca poti folosi codul aplicatiei tale direct fara sa fii nevoit sa ai un GUI web pentru el.
+Doar fii sigur sa nu pui scripturile CLI PHP din radacina publica.
 
-Try running PHP from your command line:
+Incearca sa rulezi PHP din linia de comanda:
 
 {% highlight bash %}
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. 
+Optiunea `-i` va afisa configuratia ta PHP exact ca functia [`phpinfo`][phpinfo].
 
-The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number of other useful [command line options][cli-options], too.
+Optiunea `-a` furnizeaza un shell interactiv, similar cu IRB-ul lui Ruby sau cu shell-ul interactiv al lui Python.
+Exista o multitudine de alte de optiuni[command line options][cli-options] utile.
 
-Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
+Hai sa scriem un simplu program CLI "Hello, $name". Ca sa il incercam, creem un fisier numit `hello.php`, ca mai jos.
 
 {% highlight php %}
 <?php
 if ($argc != 2) {
-    echo "Usage: php hello.php [name].\n";
+    echo "Uz: php hello.php [name].\n";
     exit(1);
 }
 $name = $argv[1];
 echo "Hello, $name\n";
 {% endhighlight %}
 
-PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
+PHP seteaza doua variabile speciale bazate pe argumentele cu care este rulat scriptul tau.
+[`$argc`][argc] este o variabila integer ce contine numarul argumentelor si [`$argv`][argv] este un array ce contine
+*valoarea* fiecarui argument. Primul argument este totdeauna numele fisierului scriptului tau PHP, in cazul nostru `hello.php`.
 
-The `exit()` expression is used with a non-zero number to let the shell know that the command failed. Commonly used exit codes can be found [here][exit-codes]
+Expresia `exit()` este utilizata cu un numar nenul pentru a instiinta shell-ul ca comanda a esuat. Coduri de exit des
+uzitate pot fi gasite [aici][exit-codes]
 
-To run our script, above, from the command line:
+Ca sa ne rulam scriptul de mai sus din linia de comanda:
 
 {% highlight bash %}
 > php hello.php
-Usage: php hello.php [name]
+Uz: php hello.php [name]
 > php hello.php world
 Hello, world
 {% endhighlight %}
 
 
- * [Learn about running PHP from the command line][php-cli]
- * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
+ * [Invata despre rularea PHP din linia de comanda][php-cli]
+ * [Invata despre configurarea Windows pentru a rula PHP din linia de comanda][php-cli-windows]
 
-[phpinfo]: http://php.net/manual/en/function.phpinfo.php
-[cli-options]: http://www.php.net/manual/en/features.commandline.options.php
-[argc]: http://php.net/manual/en/reserved.variables.argc.php
-[argv]: http://php.net/manual/en/reserved.variables.argv.php
-[php-cli]: http://php.net/manual/en/features.commandline.php
-[php-cli-windows]: http://www.php.net/manual/en/install.windows.commandline.php
+[phpinfo]: http://php.net/manual/ro/function.phpinfo.php
+[cli-options]: http://www.php.net/manual/ro/features.commandline.options.php
+[argc]: http://php.net/manual/ro/reserved.variables.argc.php
+[argv]: http://php.net/manual/ro/reserved.variables.argv.php
+[php-cli]: http://php.net/manual/ro/features.commandline.php
+[php-cli-windows]: http://www.php.net/manual/ro/install.windows.commandline.php
 [exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
