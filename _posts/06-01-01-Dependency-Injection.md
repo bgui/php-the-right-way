@@ -1,13 +1,14 @@
 ---
-title: Dependency Injection
+title: Injectarea dependintelor
 ---
 
-# Dependency Injection {#dependency_injection_title}
+# Injectarea dependintelor {#dependency_injection_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
+Din [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
 
-> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it 
-> possible to change them, whether at run-time or compile-time.
+> Injectarea dependintelor este un sablon de proiectare software care permite scoaterea dependintelor hardcodate
+> si face posibila schimbarea lor, fie ca este in timpul compilarii sau in timpul rularii.
 
-This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a component 
-with it's dependencies either through constructor injection, method calls or the setting of properties. It is that simple.
+Acest citat face ca acest concept sa sune mult mai complicat decat este cu adevarat. Injectarea dependintelor pune
+la dispozitia unei componente propriile sale dependinte ori prin injectie in constructor, apel al metodelor
+sau prin setarea proprietatilor. E atat de simplu.

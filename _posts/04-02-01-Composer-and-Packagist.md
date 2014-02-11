@@ -2,78 +2,98 @@
 isChild: true
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer si Packagist {#composer_and_packagist_title}
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and, with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for you.
+Composer este un **genial** manager de dependinte pentru PHP. Listezi dependintele proiectului tau in fisierul `composer.json` si, cu cateva
+comenzi simple Composer va descarca automat dependintele si va seta autoloading pentru tine.
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
+Exista deja multe biblioteci PHP care sunt compatibile cu Composer, gata sa fie folosite in proiectul tau. Aceste "pachete" sunt
+listate pe [Packagist][1], repository-ul oficial de biblioteci PHP compatibile Composer.
 
-### How to Install Composer
+### Cum sa instalezi Composer
 
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
+Poti instala Composer local (in directorul curent; desi asta nu mai este recomandat) sau global (e.g. /usr/local/bin).
+Sa presupunem ca vrei sa instalezi Composer local. Din directorul radacina al proiectului tau:
 
     curl -s https://getcomposer.org/installer | php
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+Asta va descarca `composer.phar` (o arhiva PHP binara). Poti executa asta cu `php` pentru a administra dependintele proiectului.
+<strong>Nota:</strong> daca inserezi codul descarcat direct in interpreter, citeste mai intai codul online ca sa iti confirmi ca e sigur.
 
-### How to Install Composer (manually)
+### Cum sa instalezi Composer (manual)
 
-Manually installing Composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+Instalarea manuala este o tehnica mai avansata; insa exista varii motive pentru care un dezvoltator ar prefera
+aceasta metoda versus folosirea interactiva. Instalarea interactiva verifica instalarea ta de PHP ca sa
+se asigure ca:
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
+- o versiune suficienta de PHP e folosita
+- fisiere `.phar` pot fi executate corect
+- anumite directoare au permisiuni suficiente
+- anumite extensii problematice nu sunt incarcate
+- anumite setari din `php.ini` sunt setate
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
+Deoarece o instalare manuala nu face nici unul din aceste verificari, trebuie sa decizi daca
+merita pentru tine. Mai jos este cum obtii Composer manual:
 
     curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
+Calea `$HOME/local/bin` (sau alta aleasa de tine) trebuie sa fie in `$PATH`. Asta va avea ca rezultat
+disponibilitatea comenzii `composer`.
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+Cand dai peste documentatie care cere sa rulezi Composer ca `php composer.phar install`, poti substitui cu:
 
     composer install
     
-This section will assume you have installed composer globally.
+Aceasta sectiune va presupune ca ai instalat composer global.
 
-### How to Define and Install Dependencies
+### Cum sa definesti si sa instalezi dependinte
 
-Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `composer require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project.
+Composer tine seama de dependintele proiectului tau intr-un fisier numit `composer.json`. Il poti administra manual daca vrei,
+sau poti folosi insusi Composer. Comanda `composer require` adauga o dependinta a proiectului iar daca nu ai un fisier
+`composer.json` unul va fi creeat. Aici e un exemplu care adauga [Twig][2] ca dependinta a proiectului.
 
 	composer require twig/twig:~1.8
 
-Alternatively the `composer init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
+Alternativ, comanda `composer init` te va ghida prin constructia unui fisier `composer.json` intreg pentru proiectul tau.
+Oricum, cand ai creeat `composer.json` ii poti spune Composer-ului sa descarce si sa instaleze dependintele in
+directorul `vendors/`. Asta se aplica si proiectelor pe care le-ai descarcat care deja au un fisier `composer.json`:
 
     composer install
 
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+Acum, adauga aceasta linie in fisierul PHP principal al proiectului tau; ii va spune lui PHP sa foloseasca autoloaderul
+din Composer.
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+Acum iti poti folosi dependintele in proiect, iar ele for fi incarcate automat cand e nevoie de ele.
 
-### Updating your dependencies
+### Actualizarea dependintelor
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+Composer creeaza un fisier numit `composer.lock` care stocheaza versiunea exacta a fiecarui pachet pe care il
+descarca cand ai executat prima data `php composer.phar install`. Daca impartasesti proiectul tau cu alti
+dezvoltatori si `composer.lock` este parte a distributiei tale, cand ei executa `php composer.phar install`
+ei vor obtine aceleasi versiuni ca si tine. Pentru a iti actualiza dependintele, ruleaza
+`php composer.phar update`.
 
-This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+Asta este cel mai util cand iti definesti necesitatile ca versiuni flexibile. De exemplu o versiune necesara
+de ~1.8 inseamna "orice mai noi decat 1.8.0, dar mai jos decat 2.0.x-dev". Poti folosi `*` ca in `1.8.*`.
+Acum comanda `php composer.phar update` va actualiza toate dependintele catre cea mai noua versiune definita de tine.
 
-### Update Notifications
+### Instiintari de actualizare
 
-To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
-your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
+Pentru a primi instiintari de noi versiuni te poti inscrie in [VersionEye][3], un serviciu web care monitorizeaza
+conturile tale GitHub si BitBucket dupa fisiere `composer.json` si care trimite email-uri cu noile pachete lansate.
 
-### Checking your dependencies for security issues
+### Verificarea dependintelor tale impotriva problemelor de securitate
 
-The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
+[Security Advisories Checker][4] este un serviciu web si o unealta de linie de comanda, ambele vor examina `composer.lock`
+si iti vor spune daca ai nevoie sa actualizezi vreuna din dependinte.
 
-* [Learn about Composer][5]
+* [Afla despre Composer][5]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org

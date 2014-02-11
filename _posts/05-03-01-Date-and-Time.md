@@ -2,15 +2,16 @@
 isChild: true
 ---
 
-## Date and Time {#date_and_time_title}
+## Date si Timp {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
-many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
-common uses. It can handle time zones, but that is outside this short introduction.
+PHP are o clasa numita DateTime pentru a te ajuta la citirea, scrierea, compararea sau calcularea unor date sau timpi.
+Sunt multe functii legate de date si timp in PHP in afara de DateTime, dar ea furnizeaza o interfata usoara si orientata-
+obiect pentru majoritatea cazurilor. Poate manevra fusuri orare, dar asta este in afara aceste scurte introduceri.
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+Pentru a incepe lucrul cu DateTime, transformi un string brut intr-un obiect cu metoda fabrica `createFromFormat()` sau
+poti face un `new \DateTime` pentru a obtine data si timpul curente. Folosesti metoda `format()` pentru a transforma
+DateTIme inapoi intr-un string pentru afisare.
+
 {% highlight php %}
 <?php
 $raw = '22. 11. 1968';
@@ -19,44 +20,44 @@ $start = \DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
-the `diff()` method. It will return new DateInterval, which is super easy to display.
+Calcularea cu DateTime este posibila cu clasa DateInterval. DateTime are metode precum `add()` si `sub()` care
+primesc un DateInterval ca argument. Nu scrie cod care presupune acelas numar de secunde in fiecare zi, pentru ca
+atat ora de iarna si alterarile de fus orar vor invalida aceasta asumptie. Foloseste intervale de data pentru asta.
+Pentru a calcula diferenta de data folosete metoda `diff()`. Va returna un nou DateInterval care este super usor de afisat.
 {% highlight php %}
 <?php
-// create a copy of $start and add one month and 6 days
+// creeaza o copie a lui $start si adauga o luna si 6 zile
 $end = clone $start;
 $end->add(new \DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
-echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
-// Difference: 1 month, 6 days (total: 37 days)
+echo 'Diferenta: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
+// Diferenta: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+Pe obiecte DateTime poti folosi comparatii standard:
 {% highlight php %}
 <?php
 if ($start < $end) {
-    echo "Start is before end!\n";
+    echo "Start este inainte de sfarsit!\n";
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+Un ultim exemplu pentru a demonstra clasa DatePeriod. Este folosita pentru a itera prin evenimente recurente.
+Poate primi doua obiecte DateTime, start si end, si intervalul pentru care va returna toate evenimentele dintre ele.
 {% highlight php %}
 <?php
-// output all thursdays between $start and $end
+// afiseaza toate Joi-ile dintre $start and $end
 $periodInterval = \DateInterval::createFromDateString('first thursday');
 $periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
 foreach ($periodIterator as $date) {
-    // output each date in the period
+    // afiseaza fiecare data din perioada
     echo $date->format('m/d/Y') . ' ';
 }
 {% endhighlight %}
-
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+1
+* [Citeste despre DateTime][datetime]
+* [Citeste despre formatarea datelor][dateformat] (operatiuni string formatare date)
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php

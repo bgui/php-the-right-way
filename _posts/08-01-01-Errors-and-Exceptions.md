@@ -1,6 +1,6 @@
 ---
-title: Errors and Exceptions
+title: Erori si Exceptii
 ---
 
-# Errors and Exceptions {#errors_and_exceptions_title}
+# Erori si exceptii {#errors_and_exceptions_title}
 

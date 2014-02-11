@@ -2,10 +2,10 @@
 isChild: true
 ---
 
-## Further Reading {#further_reading_title}
+## Alte lecturi {#further_reading_title}
 
-- [Learning about Dependency Injection and PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
-- [What is Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)
-- [Dependency Injection: An analogy](http://mwop.net/blog/260-Dependency-Injection-An-analogy.html)
-- [Dependency Injection: Huh?](http://net.tutsplus.com/tutorials/php/dependency-injection-huh/)
-- [Dependency Injection as a tool for testing](http://www.happyaccidents.me/dependency-injection-as-a-tool-for-testing/)
+- [Citeste despre injectarea dependintelor si PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
+- [Ce este injectarea de dependinte?](http://fabien.potencier.org/article/11/what-is-dependency-injection)
+- [Injectarea de dependinte: O analogie](http://mwop.net/blog/260-Dependency-Injection-An-analogy.html)
+- [Injectarea de dependinte: ce?](http://net.tutsplus.com/tutorials/php/dependency-injection-huh/)
+- [Injectarea de dependinte ca o unealta pentru testare](http://www.happyaccidents.me/dependency-injection-as-a-tool-for-testing/)

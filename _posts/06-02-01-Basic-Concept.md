@@ -2,13 +2,13 @@
 isChild: true
 ---
 
-## Basic Concept {#basic_concept_title}
+## Concept de baza {#basic_concept_title}
 
-We can demonstrate the concept with a simple, yet naive example.
+Putem demonstra conceptul cu o simpla, desi naiv exemplu.
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the
-adapter in the constructor and create a hard dependency. This makes testing difficult and means the `Database` class is
-very tightly coupled to the adapter.
+Aici avem clasa `Database` care necesita un adaptor ca sa vorbeasca cu baza de date. Instantiem
+adaptorul in constructor si cream o dependinta explicita. Asta face testarea dificila si inseamna
+ca clasa `Database` este strans cuplata de adaptor.
 
 {% highlight php %}
 <?php
@@ -27,7 +27,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
+Acest cod poate fi refactorizat pentru a folosi injectarea de dependinte si asadar sa flexibilizeze dependinta.
 
 {% highlight php %}
 <?php
@@ -46,6 +46,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we could
-set it directly.
+Ii dam acum lui `Database` propria lui dependinta fata de atunci cand il lasam pe el sa si-o creeze singur.
+Am putea chiar creea o metoda care ar accepta un argument al dependintei si ar seta-o astfel, sau daca proprietatea
+`$adapter` ar fi publica am putea-o seta direct.
+

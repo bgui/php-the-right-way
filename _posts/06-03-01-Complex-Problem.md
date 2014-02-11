@@ -2,29 +2,34 @@
 isChild: true
 ---
 
-## Complex Problem {#complex_problem_title}
+## Problema Complexa {#complex_problem_title}
 
-If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or *"Dependency Inversion Principle"*.
-These are the complex problems that Dependency Injection solves.
+Daca ai citit vreodata despre injectarea dependintelor atunci ai vazut probabil termenii *"Inversiunea Controlului"*
+sau *"Principiul inversiunii dependintei"*.
+Acestea sunt problemele complexe pe care injectarea dependintelor le rezolva.
 
-### Inversion of Control
+### Inversiunea controlului
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organisational control entirely separate from our objects.
-In terms of Dependency Injection, this means loosening our dependencies by controlling and instantiating them elsewhere in the system.
+Inversiunea controlului este, dupa cum se aude, inversiunea controlului unui sistem prin pastrarea controlului
+organizational complet separat de obiectele noastre.
+In termeni de injectarea dependintelor, asta inseamna flexibilizarea dependintelor noastre prin
+controlul si instantierea lor in alta parte a sistemului.
 
-For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control
-are you inverting, and where to? For example, MVC frameworks would generally provide a super object or base controller that other
-controllers must extend to gain access to its dependencies. This **is** Inversion of Control, however, instead of loosening
-dependencies, this method simply moved them.
+De ani, framework-urile PHP realizau inversiunea controlului, dar, intrebarea a devenit, care parte
+a controlului o inversezi, si spre ce? De exemplu, framework-urile MVC puneai la dispozitie un
+super obiect sau controller de baza pe care alte controllere trebuiau sa le extinda pentru a primi
+acces la dependintele sale. Aceasta **este** inversiune a controlului, insa, in loc de flexibilizare
+a dependintelor, aceasta metoda le muta doar in alta parte.
 
-Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we need them,
-without the need for any hard coded dependencies at all.
+Injectarea dependintelor ne permite sa rezolvam mai elegant aceasta problema prin injectarea numai
+dependintelor de care avem nevoie, cand avem nevoie de ele, fara a fi nevoie sa le explicitam deloc in scris.
 
-### Dependency Inversion Principle
+### Principiul inversiunii dependintelor
 
-Dependency Inversion Principle is the "D" in the S.O.L.I.D set of object oriented design principles that states one should
-*"Depend on Abstractions. Do not depend on concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract
-classes rather than concrete implementations. We can easily refactor the above example to follow this principle.
+Principiul inversiunii dependintelor este "D"-ul din setul S.O.L.I.D de principii de proiectare orientata obiect
+care spune ca ar trebui sa *"depinzi de abstractiuni si nu de concret-uri"*. Spus simplu, asta inseamna ca
+dependintele noastre ar trebui sa fie interfete/contracte sau clase abstracte mai degraba decat implementari
+concrete. Putem refactoriza exemplul de mai sus ca sa urmeze acest principiu.
 
 {% highlight php %}
 <?php
@@ -45,12 +50,13 @@ interface AdapterInterface {}
 class MysqlAdapter implements AdapterInterface {}
 {% endhighlight %}
 
-There are several benefits to the `Database` class now depending on an interface rather than a concretion.
+Exista cateva beneficii acum ca clasa `Database` depinde de o interfata si nu de ceva concret.
 
-Consider that you are working in a team and the adapter is being worked on by a colleague. In our first example, we would have
-to wait for said colleague to finish the adapter before we could properly mock it for our unit tests. Now that the dependency
-is an interface/contract we can happily mock that interface knowing that our colleague will build the adapter based on that contract.
+Imagineaza-ti ca lucrezi in echipa iar colegul tau lucreaza la adaptor. In primul exemplu, ar trebui sa asteptam
+dupa colegul ca sa termine adaptorul inainte de a il mock-ui pentru unit teste. Acum ca dependinta este o
+interfata/contract noi putem sa mock-uim linistiti interfata stiind ca colegul va construi adapterul bazat pe contract.
 
-An even bigger benefit to this method is that our code is now much more scalable. If a year down the line we decide that we
-want to migrate to a different type of database, we can write an adapter that implements the original interface and inject that instead,
-no more refactoring would be required as we can ensure that the adapter follows the contract set by the interface.
+Un si mai mare beneficiu al acestei metode este ca codul nostru este acum mai scalabil. Daca peste un an vom decide ca
+vrem sa migram la un alt tip de baza de date, putem scrie un adaptor care implementeaza interfata originala si
+sa il injectam pe acela, nici un pic de refactorizare nu ar fi necesara intrucat putem fi siguri ca adaptorul
+respecta contractul setat de interfata.

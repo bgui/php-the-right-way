@@ -2,17 +2,31 @@
 isChild: true
 ---
 
-## Password Hashing {#password_hashing_title}
+## Hash-uirea parolelor {#password_hashing_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a database and later used to authenticate users upon login.
+Toata lumea construieste o aplicatie PHP care se bazeaza pana la urma pe autentificarea
+utilizatorilor. Username-urile si parolele sunt stocate in baza de date iar mai
+tarziu folosite pentru a autentifica utilizatorii.
 
-It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible, one way function performed against the user's password. This produces a fixed-length string that cannot be feasibly reversed. This means you can compare a hash against another to determine if they both came from the same source string, but you cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized third-party, all user accounts are now compromised. Some users may (unfortunately) use the same password for other services. Therefore, it is important to take security seriously.
+E important ca parolele sa fie bine [_hash-uite_][3] inainte de salvarea in baza de date.
+Hash-uirea parolelor este o functie ireversibila, mono-directionala aplicata pe parola
+utilizatorului. Aceasta produce un sir de caractere de lungime fixa care nu poate fi
+folosit pentru a afla parola originala intr-un timp fezabil. Asta inseamna ca poti compara
+un hash versus un altul ca sa vezi daca ambele au venit de la acelas sir sursa, dar nu
+poti determina sirul original. Daca parolele nu sunt hash-uite iar baza ta de date
+este accesata de un tert neautorizat, toate parolele vor fi atunci compromise.
+Unii utilizatori ar putea(din pacate) fii folosit aceeasi parola si la alte servicii.
+Asadar e important sa iei in serios securitatea.
 
-**Hashing passwords with `password_hash`**
+**Hash-uirea parolelor cu `password_hash`**
 
-In PHP 5.5 `password_hash` was introduced. At this time it is using BCrypt, the strongest algorithm currently supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat` library was created to provide forward compatibility for PHP >= 5.3.7.
+In PHP 5.5 a fost introdus `password_hash`. Momentan foloseste BCrypt, cel mai puternic
+algoritm suportat de PHP. Va fi actualizat in curand pentru a suporta mai multe algoritmuri.
+Biblioteca `password_compat` a fost creeata pentru a o face disponibila si pentru PHP >= 5.3.7.
 
-Below we hash a string, and then check the hash against a new string. Because our two source strings are different ('secret-password' vs. 'bad-password') this login will fail.
+Mai jos hash-uim un string, si apoi verificam hash-ul impotriva unui alt string.
+Pentru ca sursele noastre sunt diferite ('secret-password' vs. 'bad-password')
+autentificarea va esua.
 
 {% highlight php %}
 <?php
@@ -30,12 +44,12 @@ if (password_verify('bad-password', $passwordHash)) {
 
 
 
-* [Learn about `password_hash`] [1]
-* [`password_compat` for PHP  >= 5.3.7 && < 5.5] [2]
-* [Learn about hashing in regards to cryptography] [3]
+* [Invata despre `password_hash`] [1]
+* [`password_compat` pentru PHP  >= 5.3.7 && < 5.5] [2]
+* [Invata despre hashing in legatura cu criptografia] [3]
 * [PHP `password_hash` RFC] [4]
 
-[1]: http://us2.php.net/manual/en/function.password-hash.php
+[1]: http://us2.php.net/manual/ro/function.password-hash.php
 [2]: https://github.com/ircmaxell/password_compat
 [3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
 [4]: https://wiki.php.net/rfc/password_hash
