@@ -1,17 +1,18 @@
+
 ---
 isChild: true
 ---
 
 ## Șabloane de proiectare {#design_patterns_title}
 
-Cand iti construiesti aplicatia e util sa folosesti sabloane popular folosite (design patterns) atat in codul tau cat si in structura
-proiectului. Folosirea acestor sabloane comun intalnite este utila deoarece face mult mai usor de administrat codul
-si permite altor dezvoltatori sa inteleaga rapid cum se imbina totul.
+Când îți construiești aplicația e util să folosești șabloane popular folosite (design patterns) atât în codul tău cât și în structura
+proiectului. Folosirea acestor șabloane comun întâlnite este utilă deoarece face mult mai ușor de administrat codul
+și permite altor dezvoltatori să înțeleagă rapid cum se îmbina totul.
 
-Daca folosesti un framework atunci majoritatea codului de nivel inalt cat si structura proiectului vor fi
-bazate pe acel framework, asa ca multe din deciziile de sabloane au fost deja luate pentru tine. Dar este
-la latitudinea ta sa alegi cele mai bune sabloane de urmat in codul pe care il scrii deasupra framework-ului.
-Daca nu folosesti un framework atunci va trebui sa gasesti sabloanele care se potrivesc cel mai bine tipului
-si marimii aplicatiei pe care o construiesti.
+Dacă folosești un framework atunci majoritatea codului de nivel înalt cât și structura proiectului vor fi
+bazate pe acel framework, așa că multe din deciziile de șabloane au fost deja luate pentru tine. Dar este
+la latitudinea ta să alegi cele mai bune șabloane de urmat în codul pe care îl scrii deasupra framework-ului.
+Dacă nu folosești un framework atunci va trebui să găsești șabloanele care se potrivesc cel mai bine tipului
+și mărimii aplicației pe care o construiești.
 
-* Continua sa citesti despre sabloane de proiectare [Design Patterns](/pages/Design-Patterns.html)
+* Continuă să citești despre șabloane de proiectare [Design Patterns](/pages/Design-Patterns.html)
