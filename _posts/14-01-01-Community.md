@@ -1,20 +1,31 @@
 # Community {#community_title}
 
-The PHP community is as diverse as it is large, and its members are ready and willing to support new PHP programmers. Consider joining your local PHP user group (PUG) or attending larger PHP conferences to learn more about the best practices shown here. You can hang out on IRC in the #phpc channel on [irc.freenode.com][php-irc] and follow the [@phpc][phpc-twitter] twitter account. Get out there, meet new developers, learn new topics, and above all, make new friends! Other community resources include the Google+ PHP [Programmer community][php-programmers-gplus] and [StackOverflow][php-so].
+Comunitatea PHP este pe cat de mare pe atat de diversa, iar membrii sai sunt gata sa ajute
+noii programatori PHP. Gandeste-te sa te alaturi grupului local de utilizatori PHP (PUG) sau sa
+participi la conferintele mai mari PHP pentru a invata mai multe despre cele mai bune practici.
+Poti sta pe IRC pe canalul #phpc de pe [irc.freenode.com][php-irc] sau poti urmari contul de
+twitter [@phpc][phpc-twitter]. Implica-te, fa cunostinta cu noi dezvoltatori, afla despre
+topicuri noi, si, mai presus de toate, fa-ti prieteni! Alte resurse ale comunitatii includ
+[comunitatea de programatori PHP][php-programmers-gplus] de pe Google+ si [StackOverflow][php-so].
 
-[Read the Official PHP Events Calendar][php-calendar]
+[Citeste calendarul de evenimente oficial PHP][php-calendar]
 
-## PHP User Groups
+## Grupurile de utilizatori PHP
 
-If you live in a larger city, odds are there's a PHP user group nearby. Although there's not yet an official list of PUGs, you can easily find your local PUG by searching on [Google][google], [Meetup.com][meetup] or [PHP.ug][php-ug]. If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
+Daca traiesti intr-un oras mai mare, ai sansa de a exista un grup de utilizatori prin jur.
+Desi nu exista o lista oficiala de PUG-uri, poti gasi cu usurinta grupul local cautand pe
+[Google][google], [Meetup.com][meetup] sau [PHP.ug][php-ug]. Daca traiesti intr-un oras mai mic,
+s-ar putea sa nu exista un grup local; daca acesta este cazul porneste tu unul!
 
-[Read about User Groups on the PHP Wiki][php-wiki]
+[Citeste despre grupurile de utilizatori pe wiki-ul PHP][php-wiki]
 
 ## PHP Conferences
 
-The PHP community also hosts larger regional and national conferences in many countries around the world. Well-known members of the PHP community usually speak at these larger events, so it's a great opportunity to learn directly from industry leaders.
+Comunitatea PHP gazduieste de asemenea si conferinte regionale sau nationale in multe tari din
+jurul lumii. Membrii bine cunoscuti ai comunitatii PHP vorbesc de obicei la aceste evenimente
+mai mari, asa ca este o oportunitate perfecta de a invata direct de la liderii industriei.
 
-[Find a PHP Conference][php-conf]
+[Gaseste o conferinta PHP][php-conf]
 
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me

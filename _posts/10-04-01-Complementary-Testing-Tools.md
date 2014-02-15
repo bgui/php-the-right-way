@@ -2,12 +2,19 @@
 isChild: true
 ---
 
-## Complementary Testing Tools {#complementary_testing_tools_title}
+## Unelte de testare complementare {#complementary_testing_tools_title}
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
+In afara de testarea individuala si de framework-urile pentru testarea comportamentului,
+exista de asemenea si un numar de framework-uri generice si biblioteci ajutatoare
+utile pentru oricare abordare preferata.
 
-### Tool Links
+### Link-uri spre unelte
 
-* [Selenium](http://seleniumhq.org/) is a browser automation tool which can be [integrated with PHPUnit](http://phpunit.de/manual/current/en/selenium.html)
-* [Mockery](https://github.com/padraic/mockery) is a Mock Object Framework which can be integrated with [PHPUnit](http://phpunit.de/) or [PHPSpec](http://www.phpspec.net/)
-* [Prophecy](https://github.com/phpspec/prophecy) is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with [PHPSpec](http://www.phpspec.net/) and can be used with [PHPUnit](http://phpunit.de/).
+* [Selenium](http://seleniumhq.org/) este o unealta de automatizare de browser care poate
+fi [integrata cu PHPUnit](http://phpunit.de/manual/current/ro/selenium.html)
+* [Mockery](https://github.com/padraic/mockery) este un framework de mock-uire a obiectelor
+care poate fi integrat cu [PHPUnit](http://phpunit.de/) sau [PHPSpec](http://www.phpspec.net/)
+* [Prophecy](https://github.com/phpspec/prophecy) este un foarte opinionat dar si foarte puternic
+si flexibil framework pentru mock-uirea obiectelor. Este integrat cu [PHPSpec](http://www.phpspec.net/)
+si poate fi folosit cu [PHPUnit](http://phpunit.de/).
+

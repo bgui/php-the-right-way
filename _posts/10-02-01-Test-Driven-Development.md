@@ -2,33 +2,42 @@
 isChild: true
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## Dezvoltarea centrata pe teste {#test_driven_development_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+De la [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
+> Dezvoltarea centrata pe teste (TDD) este un proces de dezvoltare software care se
+bazeaza pe repetitia unui foarte scurt ciclu de dezvoltare: mai intai programatorul scrie un test
+care esueaza care descrie o imbunatatire sau o noua functionalitate, apoi produce codul care va
+satisface acel test iar in final rescrie codul cel nou intr-o maniera compatibila cu standarde.
+Kent Beck, care este creditat cu dezvoltarea sau 'redescoperirea' acestei tehnici, spunea in 2003
+ca TDD incurajaza arhitecturi simple si inspira incredere
 
-There are several different types of testing that you can do for your application
+Exista cateva diferite tipuri de testare pe care o poti face asupra aplicatiei tale
 
-### Unit Testing
+### Testarea unitara
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as
-expected, from the point you build them all the way through the development cycle. By checking
-values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+Testarea unitara este o abordare programatica pentru a asigura ca functiile, clasele si metodele
+functioneaza precum ne asteptam, de la momentul constructiei lor si prin tot parcursul ciclului
+de dezvoltare. Verificand valorile de intrare si iesire din diferite functii si metode, te poti
+asigura ca logica interna functioneaza corect. Pentru o testare de si mai mare aploare, folosind
+injectarea de dependinte si construind clase "mock" si cioturi poti verifica ca dependintele
+sunt folosite corect.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
-make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
-This will help ensure that when you make changes to this class or function later on in the development
-cycle that the old functionality continues to work as expected. The only alternative to this would be
-var_dump() in a test.php, which is no way to build an application - large or small.
+Cand creezi o clasa sau o functie ar trebui sa creezi si un test unitar pentru fiecare
+comportament pe care trebuie sa il aiba. Ca un minimum ar trebui sa te asiguri ca este produsa
+o eroare daca ii sunt furnizate argumente incorecte si ca functioneaza cand sunt primite
+argumente valide. Asta va asigura ca atunci cand mai tarziu in ciclul de dezvoltare faci schimbari
+in aceasta clasa sau functie, vechea functionalitate va continua sa mearga precum ne asteptam.
+Singura alternativa la asta ar fi var_dump() intr-un test.php, ceeace desigur nu e o optiune serioasa.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+Celalalt uz al testelor unitare este contribuirea la open source. Daca poti scrie un test care
+demonstreaza functionalitate stricata (adica esueaza), si il si repari, si arati apoi ca testul
+trece cu bine, apoi patch-urile vor avea mult mai multe sanse sa fie acceptate.
+Daca conduci un proiect care accepta cereri pull atunci ar trebui sugerezi asta ca o cerinta.
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
-applications, but there are several alternatives
+[PHPUnit](http://phpunit.de) este framework-ul de-facto pentru scrierea de teste unitare pentru
+aplicatiile PHP, dar exista si alternative
 
 * [atoum](https://github.com/atoum/atoum)
 * [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
@@ -36,25 +45,31 @@ applications, but there are several alternatives
 * [SimpleTest](http://simpletest.org)
 
 
-### Integration Testing
+### Testarea integrarii
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
+De la [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+> Testarea integrarii (uneori numita Integrare si Testare, abreviat "I&T") este faza
+in testarea softwareului in care module individuale sunt combinate si testate ca un grup.
+Se intampla dupa testarea unitara si inainte de testarea validarii. Testarea integrarii
+ia ca input modulele care au fost testate unitar, le grupeaza in agregate mai mari,
+aplica testele definite in planul de test asupra acelor agregate, si livreaza ca
+output sistemul integrat gata pentru testarea sistemului.
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many
-of the same principles are used.
+Multe dintre acealeasi unelte care pot fi folosite pentru testare unitara pot fi folosite si
+pentru testarea integrarii pentru ca multe dintre aceleasi principii sunt folosite.
 
-### Functional Testing
+### Testare functionala
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
-tests that actually use your application instead of just verifying that individual units of code are behaving
-correctly and that individual units can speak to each other correctly. These tools typically work using real
-data and simulating actual users of the application.
+Uneori cunoscuta si drept testare a acceptarii, testarea functionala inseamna folosirea de
+unelte pentru a creea automat teste care folosesc cu adevarat aplicatia in loc de a
+verifica doar ca bucati de cod individuale se comporta corect sau ca pot vorbi intre ele.
+Aceste unelte opereaza de obicei folosind date reale si simuleaza utilizatorii reali ai aplicatiei.
 
-#### Functional Testing Tools
+#### Unelte de testare functionala
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
-* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
+* [Codeception](http://codeception.com) este un framework de teste pentru intreaga stiva care include si unelte de testare a acceptarii
+* [Storyplayer](http://datasift.github.io/storyplayer) este un framework de teste pentru intreaga stiva care include si suport pentru crearea si distrugerea mediilor de test la cerere
+

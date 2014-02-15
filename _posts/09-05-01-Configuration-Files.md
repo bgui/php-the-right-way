@@ -2,14 +2,15 @@
 isChild: true
 ---
 
-## Configuration Files {#configuration_files_title}
+## Fisiere de configurare {#configuration_files_title}
 
-When creating configuration files for your applications, best practices recommend that one of the following methods 
-be followed:
+Cand creezi fisiere de configurare, bunele practici recomanda ca una dintre
+urmatoarele metode sa fie folosita:
 
-- It is recommended that you store your configuration information where it cannot be accessed directly and pulled in 
-via the file system.
-- If you must store your configuration files in the document root, name the files with a `.php` extension. This 
-ensures that, even if the script is accessed directly, it will not be output as plain text.
-- Information in configuration files should be protected accordingly, either through encryption or group/user file 
-system permissions
+- Este recomandat sa iti stochezi informatiile de configurare unde nu pot fi
+accesate direct sau extrase prin sistemul de fisiere
+- Daca trebuie sa iti stochezi fisierele de configuratie in directorul radacina,
+denumeste-le cu extensia `.php`. Asta asigura ca chiar daca scriptul este
+accesat direct, nu va fi afisat ca text.
+- Informatiile din fisierele de configurare ar trebui protejate, ori prin
+criptare, ori prin permisiunile sistemului de fisiere

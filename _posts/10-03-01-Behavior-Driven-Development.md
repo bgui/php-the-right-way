@@ -2,21 +2,26 @@
 isChild: true
 ---
 
-## Behavior Driven Development {#behavior_driven_development_title}
+## Dezvoltare centrata pe comportament {#behavior_driven_development_title}
 
-There are two different types of Behavior-Driven Development (BDD): SpecBDD and StoryBDD. SpecBDD focuses on technical behavior of code, while StoryBDD focuses on business or feature behaviors or interactions. PHP has frameworks for both types of BDD.
+Exista doua tipuri diferite de dezvoltare centrata pe comportament (BDD): SpecBDD si StoryBDD.
+SpecBDD se concentreaza pe comportamentul tehnic al codului, in timp ce StoryBDD se
+concentreaza pe business sau pe comportamentul functionalitatilor sau interactiunilor.
+Exista framework-uri PHP pentru ambele tipuri de BDD.
 
-With StoryBDD, you write human-readable stories that describe the behavior of your application. These stories
-can then be run as actual tests against your application. The framework used in PHP applications for StoryBDD
-is Behat, which is inspired by Ruby's [Cucumber](http://cukes.info/) project and implements the Gherkin DSL
-for describing feature behavior.
+Cu StoryBDD, tu scrii povestioare citibile de om, care descriu comportamentul aplicatiei tale.
+Aceste povestioare pot fi apoi rulate ca teste efective asupra aplicatiei tale. Framework-ul
+folosit in aplicatii PHP pentru StoryBDD este Behat, care este inspirat de proiectul
+[Cucumber](http://cukes.info/) din Ruby, si care implementeaza Gherkin DSL pentru
+descrierea comportamentului functionalitatilor.
 
-With SpecBDD, you write specifications that describe how your actual code should behave. Instead of testing
-a function or method, you are describing how that function or method should behave. PHP offers the PHPSpec framework for this purpose. This framework is inspired
-by the [RSpec project](http://rspec.info/) for Ruby.
+Cu SpecBDD, poti scrie specificatii care descriu cum propriul cod trebuie sa se comporte.
+In loc de a testa o functie sau o metoda, tu descrii cum acea functie sau metoda ar trebui sa
+se comporte. PHP ofera framework-ul PHPSpec pentru aceasta. Acest framework este inspirat de
+proiectul [RSpec](http://rspec.info/) pentru Ruby.
 
 ### BDD Links
 
-* [Behat](http://behat.org/), the StoryBDD framework for PHP, inspired by Ruby's [Cucumber](http://cukes.info/) project;
-* [PHPSpec](http://www.phpspec.net/), the SpecBDD framework for PHP, inspired by Ruby's [RSpec](http://rspec.info/) project;
-* [Codeception](http://www.codeception.com) is a full-stack testing framework that uses BDD principles.
+* [Behat](http://behat.org/), framework-ul StoryBDD pentru PHP, inspirat de [Cucumber](http://cukes.info/) din Ruby;
+* [PHPSpec](http://www.phpspec.net/), framework-ul SpecBDD pentru PHP, inspirat de proiectul [RSpec](http://rspec.info/) din Ruby;
+* [Codeception](http://www.codeception.com) este o framework de intreaga stiva care foloseste principii BDD.

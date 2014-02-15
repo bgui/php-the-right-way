@@ -4,31 +4,31 @@ isChild: true
 
 ## Vagrant {#vagrant_title}
 
-Rularea aplicatiei tale pe diferite medii in dezvoltare si productie poate duce catre aparitia unor bug-uri neobisnuite 
-atunci cand are loc lansarea aplicatiei. De asemenea este dificil sa pastrezi actualizate la zi diferite medii de 
-dezvoltare cu aceleasi versiuni ale tuturor bibliotecilor folosite atunci cand se lucreaza cu o echipa de dezvoltatori.
+Rularea aplicației tale pe diferite medii în dezvoltare și producție poate duce către apariția unor bug-uri neobișnuite 
+atunci când are loc lansarea aplicației. De asemenea este dificil sa păstrezi actualizate la zi diferite medii de 
+dezvoltare cu aceleași versiuni ale tuturor bibliotecilor folosite atunci când se lucrează cu o echipa de dezvoltatori.
 
-Daca dezvolti pe Windows si lansezi pe Linux (sau orice non-Windows) sau dezvolti in echipa ar trebui sa iei in calcul
- folosirea unei masini virtuale. Suna complicat, dar folosind [Vagrant][vagrant] poti construi o masina virtuala simpla
- cu numai cativa pasi. Aceste masini de baza pot fi configurate manual sau poti folosi "provisioning"-software cum sunt
- [Puppet][puppet] sau [Chef][chef] care sa faca asta pentru tine.
-Initializarea masinii de baza e o metoda buna de a asigura ca mai multe masini sunt setate intr-o maniera identica si
- elimina nevoia de a avea liste cu comenzi de configurare. De asemenea iti poti distruge masina de baza si o poti
- recrea fara prea multi pasi manuali fiind astfel usor de a crea o instalare proaspata.
+Dacă dezvolți pe Windows și lansezi pe Linux (sau orice non-Windows) sau dezvolți în echipa ar trebui sa iei în calcul
+ folosirea unei mașini virtuale. Suna complicat, dar folosind [Vagrant][vagrant] poți construi o mașina virtuala simpla
+ cu numai câțiva pași. Aceste mașini de baza pot fi configurate manual sau poți folosi "provisioning"-software cum sunt
+ [Puppet][puppet] sau [Chef][chef] care sa facă asta pentru tine.
+Inițializarea mașinii de baza e o metoda buna de a asigura ca mai multe mașini sunt setate într-o maniera identica și
+ elimina nevoia de a avea liste cu comenzi de configurare. De asemenea iți poți distruge mașina de baza și o poți
+ recrea fără prea multi pași manuali fiind astfel ușor de a crea o instalare proaspăta.
 
-Vagrant creeaza directoare comune folosite pentru a pastra in comun codul tau intre gazda si masina virtuala, insemnand
- ca poti crea si edita fisiere pe masina gazda si apoi poti rula codul inauntru masinii virtuale.
+Vagrant creează directoare comune folosite pentru a păstra în comun codul tău intre gazda și mașina virtuala, însemnând
+ ca poți crea și edita fișiere pe mașina gazda și apoi poți rula codul înauntru mașinii virtuale.
 
 ### Un pic de ajutor
 
-Daca ai nevoie de putin ajutor pentru a incepe sa folosesti Vagrant exista trei servicii ce ar putea fi utile:
+Dacă ai nevoie de puțin ajutor pentru a începe sa folosești Vagrant exista trei servicii ce ar putea fi utile:
 
-- [Rove][rove]: serviciu care permite sa iti pregenerezi configuratii Vagrant tipice, PHP numarandu-se printre optiuni.
- Initializarea este facuta cu Chef.
-- [Puphpet][puphpet]: GUI simplu pentru a seta masini virtuale pentru dezvoltare PHP. **Foarte concentrat pe PHP**.
- In afara masinilor virtuale locale, poate fi folosit si pentru a plasa la servicii cloud. Initializarea e facuta cu Puppet.
-- [Protobox][protobox]: este un nivel deasupra lui vagrant si un GUI web pentru a seta masini virtuale pentru dezvoltare
- web. Un singur document YAML controleaza tot ce e instalat pe masina virtuala.
+- [Rove][rove]: serviciu care permite sa iți pregenerezi configurații Vagrant tipice, PHP numărându-se printre opțiuni.
+ Inițializarea este făcuta cu Chef.
+- [Puphpet][puphpet]: GUI simplu pentru a seta mașini virtuale pentru dezvoltare PHP. **Foarte concentrat pe PHP**.
+ În afara mașinilor virtuale locale, poate fi folosit și pentru a plasa la servicii cloud. Inițializarea e făcută cu Puppet.
+- [Protobox][protobox]: este un nivel deasupra lui vagrant și un GUI web pentru a seta mașini virtuale pentru dezvoltare
+ web. Un singur document YAML controlează tot ce e instalat pe mașina virtuala.
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/

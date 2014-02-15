@@ -2,22 +2,34 @@
 isChild: true
 ---
 
-## Frameworks {#frameworks_title}
+## Framework-uri {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+Decat sa reinventeze roata, multi dezvoltatori PHP folosesc framework-uri ca sa construieasca
+aplicatii web. Framework-urile abstractioneaza multe dintre problemele de baza si pun la
+dispozitie interfete usor de folosit pentru a realiza actiuni des intalnite.
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a framework then there are three main types available:
+Nu ai nevoie sa folosesti un framework pentru toate proiectele. Uneori PHP simplu este
+calea cea mai buna, dar daca totusi ai nevoie de un framework atunci exista cam trei tipuri
+principale disponibile:
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
 
-Micro-frameworks are essentially a  wrapper to route a HTTP request to a callback, controller, method, etc as quickly as possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the like. They are prominently used 
-to build remote HTTP services.
+* Micro framework-uri
+* Framework-uri Full-Stack
+* Framework-uri de componente
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are known Full-Stack 
-Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+Micro-framework-uri sunt in esenta o impachetare pentru a ruta interogarea HTTP catre
+o functie callback, un controller, o metoda, etc cat mai rapid posibil, dar uneori
+vin cu cateva biblioteci extra pentru a asista dezvoltarea precum wrappere simple
+pentru baza de date etc. Sunt folosite mai ales pentru a construi servicii HTTP externe.
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based frameworks can be used together to make a micro- or full-stack framework.
+Multe framework-uri adauga un numar considerabil de functionalitati deasupra a ce este
+disponibil intr-o micro-framework iar acelea sunt numite framework-uri de tip Full-Stack
+(de "intreaga stiva"). Acestea de obicei vin la pachet si cu ORM-uri, pachete de
+autentificare etc.
 
-* [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
+Framework-urile bazate pe componente sunt colectii de biblioteci specializate.
+Disparate framework-uri de componente pot fi folosite impreuna pentru a face un
+framework micro- sau un full-stack.
+
+
+* [Framework-uri PHP populare](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)

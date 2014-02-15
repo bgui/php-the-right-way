@@ -1,3 +1,3 @@
-# Servers and Deployment {#servers_and_deployment_title}
+# Servere si Lansare {#servers_and_deployment_title}
 
-PHP applications can be deployed and run on production web servers in a number of ways.
+Aplicatiile PHP pot fi lansate (deployed) si rulate pe servere de productie intr-un numar de moduri.

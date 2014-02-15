@@ -2,74 +2,79 @@
 isChild: true
 ---
 
-## Building and Deploying your Application {#build_title}
+## Constructia si lansarea aplicatiei tale {#build_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files 
-(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for 
-potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or 
-even a continuous integration strategy, [build automation](http://en.wikipedia.org/wiki/Build_automation) is your 
-friend.
+Daca te surprinzi modificand schema bazei de date manual sau ruland testele manual inaintea actualizarii
+fisierelor tale(manual), mai gandeste-te! Cu fiecare task manual aditional necesar pentru lansarea unei noi
+versiuni a aplicatiei tale, sansa unor greseli fatale creste. Daca ai de-a face cu un simplu update,
+un proces de constructie complicat sau chiar o strategie de integrare continua, [automatizarea constructiei]
+(http://en.wikipedia.org/wiki/Build_automation) este prietena ta.
 
-Among the tasks you might want to automate are:
+Printre pasii pe care ai putea dori sa ii automatizezi s-ar putea numara:
 
-* Dependency management
-* Compilation, minification of your assets
-* Running tests
-* Creation of documentation
-* Packaging
-* Deployment
+* Managementul dependintelor
+* Compilare, minificatia resurselor tale
+* Executia de teste
+* Crearea de documentatie
+* Impachetare
+* Lansare (deployment)
 
 
-### Build Automation Tools
+### Unelte de automatizare a constructiei
 
-Build tools can be described as a collection of scripts that handle common tasks of software deployment. The build 
-tool is not a part of your software, it acts on your software from 'outside'.
+Unele pentru constructia aplicatiei pot fi descrise ca o colectie de scripturi care executa instructiuni des
+intalnite in dezvoltarea de software. Unealta de constructie nu este parte a software-ului tau, ea actioneaza
+asupta soft-ului tau din 'afara'.
 
-There are many open source tools available to help you with build automation, some are written in PHP others aren't. 
-This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
+Exista multe unelte open source disponibile care te pot ajuta cu automatizarea constructiei, unele sunt scrise in PHP
+iar altele nu. Asta nu ar trebui sa te descurajeze din a le folosi, daca sunt mai bine potrivite pentru
+jobul respectiv. Aici sunt cateva exemple:
 
-[Phing](http://www.phing.info/) is the easiest way to get started with automated deployment in the PHP world. With 
-Phing you can control your packaging, deployment or testing process from within a simple XML build file. Phing (which 
-is based on [Apache Ant](http://ant.apache.org/)) provides a rich set of tasks usually needed to install or update a 
-web app and can be extended with additional custom tasks, written in PHP.
+[Phing](http://www.phing.info/) este cea mai usoara cale de a incepe lansare automata in lumea PHP. Cu
+Phing tu iti controla impachetarea, transportul sau procesul de testare dintr-un simplu fisier XML. Phing (care e
+bazat pe [Apache Ant](http://ant.apache.org/)) pune la dispozitie un bogat set de instructiuni de obicei
+necesare pentru actualizarea sau instalarea unei aplicatii web si poate fi extins cu instructiuni
+personalizate aditionale, scrise in PHP.
 
-[Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* to 
-execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying 
-Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of 
-Capistrano depends on a working knowledge of Ruby and Rake.
+[Capistrano](https://github.com/capistrano/capistrano/wiki) este un sistem pentru *programatori intermediari-spre-avansati*
+pentru a executa comenzi, intr-o maniera structurata si repetabila pe una sau mai multe masini externe.
+Este pre-configurat pentru lansarea de aplicatii Ruby on Rails, dar totusi se pot lansa cu succes
+si sisteme PHP cu el. Uzul cu succes al Capistrano depinde de cunostinte in Ruby si Rake.
 
-Dave Gardner's blog post [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
-is a good starting point for PHP developers interested in Capistrano.
+Blogpost-ul lui Dave Gardner [Lansare PHP cu Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/)
+este un bun punct de plecare pentru dezvoltatorii PHP interesati de Capistrano.
 
-[Chef](http://www.opscode.com/chef/) is more than a deployment framework, it is a very powerful Ruby based system 
-integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
+[Chef](http://www.opscode.com/chef/) este mai mult decat un framework de lansare a codului, este un puternic system
+de integrare bazat pe Ruby care nu numai iti transporta aplicatia dar iti poate construi intregul server sau masini virtuale.
 
-Chef resources for PHP developers:
+Resurse Chef pentru programatori PHP:
 
-* [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
-* [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system](https://github.com/opscode-cookbooks/php)
+* [O serie de articole in trei parti despre lansarea unei aplicatii LAMP cu Chef, Vagrant, si EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
+* [Carte cu retete Chef care instaleaza si configureaza PHP 5.3 si sistemul de pachete PEAR](https://github.com/opscode-cookbooks/php)
 
-Further reading:
+Lecturi aprofundate:
 
-* [Automate your project with Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
-* [Maven](http://maven.apache.org/), a build framework based on Ant and [how to use it with PHP](http://www.php-maven.org/)
+* [Automatizeaza-ti proiectul cu Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
+* [Maven](http://maven.apache.org/), un framework pentru automatizarea constructiei (build) bazat pe Ant si
+[cum sa-l folosesti cu PHP](http://www.php-maven.org/)
 
-### Continuous Integration
+### Integrare continua
 
-> Continuous Integration is a software development practice where members of a team integrate their work frequently, 
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this 
-> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more 
-> rapidly.
+> Integrarea continua este o practica a dezvoltarii software unde membrii unei echipeisi integreaza munca frecvent,
+> de obicei fiecare persoana integreaza cel putin zilnic — ducand la mai multe integrari pe zi. Multe echipe gasesc
+> ca aceasta abordare duce la un numar semnificativ mai mic de probleme de integrare si permite unei echipe sa
+> dezvolte software consistent mai rapid.
+
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has 
-done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous 
-integration service for the open source community. It is integrated with GitHub and offers first class support for many 
-languages including PHP.
 
-Further reading:
+Exista diferite metode de a implementa integrare continua pentru PHP. Recent [Travis CI](https://travis-ci.org/) a facut ca integrarea continua sa devina o realitate chiar si pentru proiecte mici.
+Travis CI este un serviciu gazduit de integrare continua pentru comunitatea open source.
+Este integrat cu GitHub si ofera suport de prima mana pentru multe limbaje inclusiv PHP.
 
-* [Continuous Integration with Jenkins](http://jenkins-ci.org/)
-* [Continuous Integration with PHPCI](http://www.phptesting.org/)
-* [Continuous Integration with Teamcity](http://www.jetbrains.com/teamcity/)
+Lecturi aprofundate:
+
+* [Integrare continua cu Jenkins](http://jenkins-ci.org/)
+* [Integrare continua cu PHPCI](http://www.phptesting.org/)
+* [Integrare continua cu Teamcity](http://www.jetbrains.com/teamcity/)

@@ -1,12 +1,14 @@
 ---
-title: Platform as a Service (PaaS)
+title: Platforma ca un Serviciu (PaaS)
 isChild: true
 ---
 
-## Platform as a Service (PaaS)  {#platform_as_a_service_paas_title}
+## Platforma ca un Serviciu (PaaS)  {#platform_as_a_service_paas_title}
 
-PaaS provides the system and network architecture necessary to run PHP applications on the web. This means little to no 
-configuration for launching PHP applications or PHP frameworks. 
+PaaS ne pune la dispozitie sistemul si arhitectura necesara pentru a rula aplicatii PHP pe web.
+Asta inseamna configurare putina sau deloc pentru lansarea aplicatiilor PHP sau
+framework-urilor PHP.
 
-Recently PaaS has become a popular method for deploying, hosting, and scaling PHP applications of all sizes. You can 
-find a list of [PHP PaaS "Platform as a Service" providers](#php_paas_providers) in our [resources section](#resources). 
+Recent PaaS a devenit o metoda populara pentru lansarea, gazduirea, si scalarea aplicatiilor PHP
+de toate marimile. Poti gasi o lista de [furnizori de PHP ca platforma ca serviciu](#php_paas_providers)
+in [sectiunea de resurse](#resources).

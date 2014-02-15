@@ -1,21 +1,27 @@
 ---
 layout: page
-title: Design Patterns
+title: Șabloane de proiectare
 ---
 
-# Design Patterns
+# Șabloane de proiectare
 
 There are numerous ways to structure the code and project for you web application, and you can put as much or as little
 thought as you like into architecting. But it is usually a good idea to follow common patterns because it will make
 your code easier to manage and easier for others to understand.
+Exista numeroase moduri in care iti poti structura codul si proiectul aplicatiei tale, si poti
+investi cat de mult sau cat te putin efort vrei in arhitectura sa. De obicei e o idee buna
+sa adopti sabloane populare pentru ca va fi mai usor sa iti administrezi codul si
+va fi mai usor pentru ceilalti sa il inteleaga.
 
-* [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
-* [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
+
+* [Șablon de arhitectura pe Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
+* [Șabloane de proiectare Software pe Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
 
 ## Factory
 
-One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates
-the object you want to use. Consider the following example of the factory pattern:
+Unul dintre cele mai utilizate sabloane de proiectare este cel denumit Factory (fabrica).
+In acest sablon, o clasa pur si simplu creeaza obiectul pe care vrei sa il folosesti.
+Urmatorul exemplu ilustreaza sablonul:
 
 {% highlight php %}
 <?php
@@ -44,39 +50,42 @@ class AutomobileFactory
     }
 }
 
-// have the factory create the Automobile object
+// fabrica va creea obiectul Automobil
 $veyron = AutomobileFactory::create('Bugatti', 'Veyron');
 
-print_r($veyron->get_make_and_model()); // outputs "Bugatti Veyron"
+print_r($veyron->get_make_and_model()); // afiseaza "Bugatti Veyron"
 {% endhighlight %}
 
-This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way; the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
-will only have to modify the code in the factory, instead of every place in your project that uses the Automobile
-class. The second possible benefit is that if creating the object is a complicated job you can do all of the work in
-the factory, instead of repeating it every time you want to create a new instance.
+Acest cod foloseste o fabrica pentru a creea un obiect automobil. Exista doua posibile beneficii
+pentru a construi cod in acest fel; primul este ca daca ai nevoie sa schimbi, sa redenumesti, sau sa inlocuiesti
+clasa Automobil mai tarziu, o poti face si nu va trebui decat sa modifici codul din fabrica, in loc de a o face
+in fiecare loc din proiect in care e folosita clasa Automobil. Al doilea posibil avantaj este ca daca e
+dificil sa construiesti obiectul atunci poti face toata munca in fabrica, in loc de a repeta de fiecare data
+cand vrei sa creezi o instanta noua.
 
-Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
-would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
-yourself a lot of trouble down the road by using factories.
+Apelul la sablonul fabrica nu este totdeauna necesar (sau intelept). Acest exemplu a fost atat de simplu incat
+e posibil ca sablonul sa adauge complexitate inutila. Totusi, daca ai un proiect mare si complex, te poti scuti
+de multe probleme mai tarziu folosind fabrici.
 
-* [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
+
+* [Șablonul fabrica pe Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
 ## Singleton
 
-When designing web applications, it often makes sense conceptually and architecturally to allow access to one and
-only one instance of a particular class. The singleton pattern enables us to do this.
+Cand construiesti aplicatii web, are deseori sens din punct de vedere conceptual si arhitectural sa permiti
+existenta a unei singure si numai unei singure instante a unei anumite clase. Sablonul singleton ne permite
+sa facem acest lucru.
 
 {% highlight php %}
 <?php
 class Singleton
 {
     /**
-     * Returns the *Singleton* instance of this class.
+     * Returneaza instanta *Singleton* a acestei clase
      *
-     * @staticvar Singleton $instance The *Singleton* instances of this class.
+     * @staticvar Singleton $instance Instanta *Singleton* a acestei clase.
      *
-     * @return Singleton The *Singleton* instance.
+     * @return Singleton Instanta *Singleton*.
      */
     public static function getInstance()
     {
@@ -89,16 +98,14 @@ class Singleton
     }
 
     /**
-     * Protected constructor to prevent creating a new instance of the
-     * *Singleton* via the `new` operator from outside of this class.
+     * Constructor privat pentru a preveni crearea unei noi instante prin operatorul `new` din afara acestei clase.
      */
     protected function __construct()
     {
     }
 
     /**
-     * Private clone method to prevent cloning of the instance of the
-     * *Singleton* instance.
+     * Metoda privata de clonare pentru a preveni clonarea instantei *Singleton*.
      *
      * @return void
      */
@@ -107,8 +114,7 @@ class Singleton
     }
 
     /**
-     * Private unserialize method to prevent unserializing of the *Singleton*
-     * instance.
+     * Metoda privata de deserializare pentru a preveni deserializarea instaintei *Singleton*.
      *
      * @return void
      */
@@ -130,33 +136,41 @@ var_dump($anotherObj === Singleton::getInstance());      // bool(false)
 var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
 {% endhighlight %}
 
-The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
-Note the following:
+Codul de mai sus implementeaza sablonul singleton folosind o variabila [*statica*](http://php.net/language.variables.scope#language.variables.scope.static) si metoda statica de creare `getInstance()`.
+Notam urmatoarele:
 
-* The constructor [`__construct`](http://php.net/language.oop5.decon#object.construct) is declared as protected to prevent creating a new instance outside of the class via the `new` operator.
-* The magic method [`__clone`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
-* The magic method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent unserializing of an instance of the class via the global function [`unserialize()`](http://php.net/function.unserialize).
-* A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the example.
+* Constructorul [`__construct`](http://php.net/language.oop5.decon#object.construct) este declarat ca protected pentru a preveni
+crearea unei noi instante a clasei via operatorului `new`.
+* Metoda magica [`__clone`](http://php.net/language.oop5.cloning#object.clone) este declarata privata pentru apreveni clonarea unei
+instante a clasei via operatorul [`clone`](http://php.net/language.oop5.cloning).
+* Metoda magica [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) este declarata privata pentru a preveni deserializarea
+unei instante a clasei via functiei globale [`unserialize()`](http://php.net/function.unserialize).
+* O noua instanta este creata via [late static binding](http://php.net/language.oop5.late-static-bindings) in
+metoda statica de creare `getInstance()` cu cuvantul cheie `static`. Asta permite subclasarea clasei `Singleton` din exemplu.
 
-The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
-request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
-class) or a shared resource (such as an event queue).
 
-You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of a
-singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
-application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
+Șablonul singleton este util atunci cand avem nevoie sa fim siguri ca avem o singura instanta a clasei pentru
+intregul ciclu de viata a aplicatiei noastre web. Aceasta se intampla de obicei pentru obiectele globale
+(precum clase de Configurare) sau resurse comune (ca o stiva de evenimente)..
 
-* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+Ar trebui sa fii precaut cand folosesti sablonul singleton, prin natura sa acesta introduce o stare globala
+in aplicatia ta, reducand astfel testabilitatea. In majoritatea cazurilor, injectarea dependintelor poate
+(si ar trebui) fi folosita in locul unei clase singleton. Folosind injectarea dependintelor inseamna ca nu
+introducem cuplari nenecesare in arhitectura aplicatiei noastre, intrucat obiectul ce foloseste resursa
+globala sau comuna nu necesita cunostinte despre o clasa definita concret.
 
-## Strategy
 
-With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for 
-instantiating a particular algorithm to have no knowledge of the actual implementation.
-There are several variations on the strategy pattern, the simplest of which is outlined below:
 
-This first code snippet outlines a family of algorithms; you may want a serialized array, some JSON or maybe 
-just an array of data:
+* [Șablonul singleton pe Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+
+## Strategie
+
+Cu sablonul Strategie incapsulezi familii specifice de algoritmi permitant clasei client responsabila de
+instantierea unui algoritm particular sa nu aiba cunostinte despre implementarea efectiva.
+Exista cateva variatii pe tema sablonului strategie, cea mai simpla dintre ele este expusa dedesubt:
+
+Prima sectiune de cod ilustreaza o familie de algoritmi; ai putea dori un array serializat, ceva JSON
+sau poate doar un array de date:
 {% highlight php %}
 <?php
 
@@ -190,16 +204,16 @@ class ArrayOutput implements OutputInterface
 }
 {% endhighlight %}
 
-By encapsulating the above algorithms you are making it nice and clear in your code that other developers can easily 
-add new output types without affecting the client code.
+Incapsuland algoritmii de mai sus faci in codul tau foarte clar ca alti programatori pot foarte usor adauga
+noi tipuri de iesiri fara sa afecteze codul client.
 
-You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
-provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/manual/en/language.oop5.typehinting.php) to ensure that the client which is utilising these behaviours is of the correct type in
-this case 'OutputInterface'.
+Vei vedea cum fiecare clasa 'output' concreta implementeaza o OutputInterface - iar asta e pentru doua scopuri,
+primul este ca astfel se prevede un contract simplu care trebuie respectat de catre orice noua implementare concreta,
+iar secund vei vedea in sectiunea urmatoare ca de acum poti utiliza [Type Hinting](http://php.net/manual/en/language.oop5.typehinting.php)
+pentru a asigura ca clientul care utilizeaza aceste comportamente este de tipul corect in acest caz 'OutputInterface'.
 
-The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
-behaviour required at runtime:
+Urmatorul extras de cod subliniaza cum o clasa client apelanta ar putea folosi unul dintre acesti algoritmi, si,
+chiar si mai bine, ar putea hotari comportamentul necesar la timpul rularii:
 {% highlight php %}
 <?php
 
@@ -219,42 +233,47 @@ class SomeClient
 }
 {% endhighlight %}
 
-The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'
-once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
-that has been set.
+Clasa client apelanta de mai sus are o proprietate privata care trebuie setata la timpul rularii si care trebuie
+sa fie de tip 'OutputInterface' odata ce aceasta proprietate e setata o apelare loadOutput() va executa metoda load() din
+clasa concreta a tipului de output care a fost setat.
 {% highlight php %}
 <?php
 
 $client = new SomeClient();
 
-// Want an array?
+// Vrei un array?
 $client->setOutput(new ArrayOutput());
 $data = $client->loadOutput();
 
-// Want some JSON?
+// Vrei niste JSON?
 $client->setOutput(new JsonStringOutput());
 $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
+* [Sablonul strategie pe Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
 
 ## Front Controller
 
-The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
-handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
-sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
-and gives you a central place to hook in code that should be run for every request (such as input sanitization).
+Sablonul front controller este acolo unde ai un singur punct de intrare in aplicatia ta web (e.g. index.php)
+care se ocupa de toate interogarile. Acest cod este responsabil de incarcarea tuturor dependintelor, de
+procesarea interogarii si de trimiterea raspunsului catre browser. Sablonul front controller poate fi benefic
+pentru ca incurajeaza cod modular si iti furnizeaza un loc central in care sa poti insera cod care sa fie
+rulat pentru fiecare interogare (precum sanitizarea datelor de intrare).
 
-* [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
+* [Șablonul Front Controller pe Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
 ## Model-View-Controller
 
-The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable throughout your application. Controllers handle the request, process the data returned from models and load views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web browser.
 
-MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+Șablonul model-view-controller (MVC) si rudele sale HMVC si MVVM iti permit sa spargi codul in obiecte logice care
+servers unor scopuri foarte exacte. Modelele servesc ca nivel de acces de date unde datele sunt recuperate in formaturi
+utilizabile prin toata aplicatia. Controller-ele se ocupa de interogare, proceseaza datele returnate de la
+modele si incarca view-urile pentru a trimite raspunsul. View-urile sunt template-uri (sabloane de afisare) in html, xml,
+etc care sunt trimise in raspuns catre browserul web.
 
-Learn more about MVC and its relatives:
+MVC este cel mai comun sablon de proiectare arhitecturala folosit in [framework-urile PHP populare](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+Afla mai multe despre MVC si rudele sale:
 
 * [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)

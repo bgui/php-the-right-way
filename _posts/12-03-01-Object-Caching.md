@@ -2,53 +2,58 @@
 isChild: true
 ---
 
-## Object Caching {#object_caching_title}
+## Cache-uirea obiectelor {#object_caching_title}
 
-There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
-to get or database calls where the result is unlikely to change. You can use object caching software to hold these
-pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests, you can gain a significant improvement in
-performance as well as reduce the load on your database servers.
+Exista momente cand poate fi benefic sa cache-uiesti obiecte individuale in codul tau, de exemplu cu date care
+sunt scump de obtinut sau cu apeluri catre baza de date care nu sunt improbabil de a se fi schimbat.
+Poti folosi software pentru cache-uirea obiectelor pentru a tine aceste bucati de date in memorie pentru
+acces rapid mai tarziu. Daca salvezi acesti itemi intr-o datastore dupa ce ii recuperezi, atunci
+iai direct din cache data viitoare cand ai nevoie de ei, poti castiga o imbunatatire semnificativa a
+performantei ca si o reducere a incarcarii serverului bazei de date.
 
-Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APCu, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+De asemenea, multe din solutiile populare de cache-uire a bytecode-ului te lasa sa stochezi si date personalizate,
+asa ca ai chiar si mai multe motive sa profiti de ele. APCu, XCache, si WinCache toate pun la dispozitie API-uri
+pentru a salva date din codul tau PHP in memoria lor.
 
-The most commonly used memory object caching systems are APCu and memcached. APCu is an excellent choice for object
-caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APCu is that it is tied to the server it's installed on. Memcached on the other hand is installed
-as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
-store in a central location and many different systems can pull from it.
+Cele mai populare sisteme de cache-uire a obiectelor sunt APCu si memcached. APCu este o excelenta alegere
+pentru cache-ul de obiecte, are un API simplu pentru inserarea datelor tale in memoria sa cache si este
+foarte simplu de folosit. Singura limitare a APCu este ca este legata de serverul pe care e instalata.
+Memcached pe de alta parte este instalat ca un serviciu separat si poate fi accesat prin intermediul retelei,
+insemnand ca poti stoca obiecte intr-o magazie super-rapida, intr-o locatie centrala, si mai multe sisteme
+diferite le pot citi din ea.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
-cache, i.e. APCu data is not shared between your worker processes. In these cases, you might want to consider using
-memcached instead, as it's not tied to the PHP processes.
+Nota: cand rulam PHP ca aplicatie (Fast-)CGI intauntrul webserver-ului, fiecare proces PHP va avea propriul
+cache, adica datele APCu nu sunt la comun pentru toate proceselor. In aceste cazuri, probabil ai vrea sa
+folosesti memcached, intrucat nu e legat de procesele PHP.
 
-In a networked configuration APCu will usually outperform memcached in terms of access speed, but memcached will be able
-to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APCu is probably your best choice for object caching.
+Intr-o configuratie cu retea, APCu va performa mai bine decat memcached in termeni de viteza, dar memcached va putea
+sa scaleze mai rapid si mai departe. Daca nu te astepti sa ai mai multe servere pentru aplicatia ta, sau nu
+ai nevoie de functionalitatile extra oferite de memcached atunci APCu este probabil cea mai buna alegere
+pentru stocarea obiectelor.
 
-Example logic using APCu:
+Exemplu de logica folosind APCu:
 
 {% highlight php %}
 <?php
-// check if there is data saved as 'expensive_data' in cache
+// afla daca exista date salvate ca 'expensive_data' in cache
 $data = apc_fetch('expensive_data');
 if ($data === false) {
-    // data is not in cache; save result of expensive call for later use
+    // data nu e in cache; salvam rezultatul lui apelare scumpa pentru uz ulterior
     apc_add('expensive_data', $data = get_expensive_data());
 }
 
 print_r($data);
 {% endhighlight %}
 
-Note that prior to PHP 5.5, APC provides both an object cache and a bytecode cache. APCu is a project to bring APC's
-object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
+De notat ca inainte de PHP 5.5, APC pune la dispozitie atat un cache de obiecte cat si un cache de bytecode.
+APCu este un proiect care aduce cache-ul de obiecte al lui APC in PHP 5.5+, intrucat PHP are de acum deja un
+bytecode cache incorporat (OPCache).
 
-Learn more about popular object caching systems:
+Afla mai multe despre sisteme populare de cache al obiectelor:
 
 * [APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](http://php.net/manual/en/ref.apc.php)
+* [APC Functions](http://php.net/manual/ro/ref.apc.php)
 * [Memcached](http://memcached.org/)
 * [Redis](http://redis.io/)
 * [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://www.php.net/manual/en/ref.wincache.php)
+* [WinCache Functions](http://www.php.net/manual/ro/ref.wincache.php)

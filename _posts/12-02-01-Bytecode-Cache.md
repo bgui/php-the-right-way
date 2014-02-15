@@ -2,20 +2,23 @@
 isChild: true
 ---
 
-## Bytecode Cache {#bytecode_cache_title}
+## Cache de bytecode {#bytecode_cache_title}
 
-When a PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and, only then, the bytecode is executed.
-If a PHP file is not modified, the bytecode will always be the same. This means that the compilation step is a waste of CPU resources.
+Cand un fisier PHP este executat, sub capota este mai intai compilat spre bytecode
+(cunoscut si ca opcode) si, numai apoi, bytecode-ul este executat.
+Daca fisierul PHP nu este modificat, bytecodul va fi totdeauna acelasi. Asta inseamna ca
+pasul de compilare este o risipa ale resurselor procesorului.
 
-This is where Bytecode cache comes in. It prevents redundant compilation by storing bytecode in memory and reusing it on successive calls.
-Setting up bytecode cache is a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
+Aici intra in scena Cache-ul de bytecod. El previne compilarea redundanta stocand
+bytecod in memorie si refolosindu-l la apelari ulterioare.
+Setarea cache-ului de bytecode este o chestiune de minute, si aplicatia ta va fi semnificativ
+mai rapida. Nu prea exista motive de a nu il folosi.
 
-As of PHP 5.5, there is a built-in bytecode cache called [OPcache](http://php.net/manual/en/book.opcache.php). This is
-also available for earlier versions.
+Incepand cu PHP 5.5, exista un cache de bytecod incorporat numit [OPcache](http://php.net/manual/ro/book.opcache.php). Este disponibil si pentru versiuni mai vechi.
 
-Other popular bytecodes caches are:
+Alte cache-uri de bytecode populare sunt:
 
-* [APC](http://php.net/manual/en/book.apc.php) (PHP 5.4 and earlier)
+* [APC](http://php.net/manual/ro/book.apc.php) (PHP 5.4 si mai vechi)
 * [XCache](http://xcache.lighttpd.net/)
-* [Zend Optimizer+](http://www.zend.com/products/server/) (part of Zend Server package)
-* [WinCache](http://www.iis.net/download/wincacheforphp) (extension for MS Windows Server)
+* [Zend Optimizer+](http://www.zend.com/products/server/) (part din pachetul Zend Server)
+* [WinCache](http://www.iis.net/download/wincacheforphp) (extensie pentru MS Windows Server)

@@ -1,11 +1,11 @@
-# Resources {#resources_title}
+# Resurse {#resources_title}
 
-## From the Source
+## De la sursa
 
-* [PHP Website](http://php.net/)
-* [PHP Documentation](http://php.net/docs.php)
+* [Websiteul PHP](http://php.net/)
+* [Documentatia PHP](http://php.net/docs.php)
 
-## People to Follow
+## Oameni de urmarit
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)
@@ -19,14 +19,14 @@
 
 ## Mentoring
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [phpmentoring.org](http://phpmentoring.org/) - Formal, mentoring unu la unu in comunitatea PHP.
 
-## PHP PaaS Providers
+## Furnizori de PHP PaaS
 
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
 * [Heroku](https://heroku.com)
-  (PHP support is undocumented but based on stable Facebook partnership [link](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
+  (suportul PHP este nedocumentat dar bazat pe parteneriat Facebook [link](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Cloud](https://www.engineyard.com/products/cloud)
 * [Red Hat OpenShift Platform](http://openshift.com)

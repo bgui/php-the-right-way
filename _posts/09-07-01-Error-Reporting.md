@@ -2,46 +2,52 @@
 isChild: true
 ---
 
-## Error Reporting {#error_reporting_title}
+## Raportarea erorilor {#error_reporting_title}
 
-Error logging can be useful in finding the problem spots in your application, but it can also expose information about 
-the structure of your application to the outside world. To effectively protect your application from issues that could 
-be caused by the output of these messages, you need to configure your server differently in development versus 
-production (live).
+Log-area (jurnalizarea) erorilor poate fi utila pentru a afla probleme in aplicatia ta, dar, de asemenea,
+poate expune informatii despre structura aplicatiei tale lumii externe.
+Pentru a-ti proteja aplicatia de probleme ce ar putea fi cauzate de afisarea acestor mesaje,
+trebuie sa iti configurezi serverul diferit pentru dezvoltare decat pentru productie (live).
 
-### Development
-
-To show every possible error during <strong>development</strong>, configure the following settings in your `php.ini`:
+### Dezvoltare
+Pentru a arata toate erorile posibile in timpul <strong>dezvoltarii</strong>,
+configurati urmatoarele setari din `php.ini`:
 
     display_errors = On
     display_startup_errors = On
     error_reporting = -1
     log_errors = On
 
-> Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP versions. The `E_ALL` constant also behaves this way as of PHP 5.4. - [php.net](http://php.net/manual/function.error-reporting.php)
 
-The `E_STRICT` error level constant was introduced in 5.3.0 and is not 
-part of `E_ALL`, however it became part of `E_ALL` in 5.4.0. What does this mean? 
-In terms of reporting every possible error in version 5.3 it means you must 
-use either `-1` or `E_ALL | E_STRICT`. 
+> Pasarea valorii `-1` va arata toate erorile posibile, chiar si cand noi niveluri
+si constante sunt adaugate in viitoare versiuni PHP. Constanta `E_ALL` se comporta
+in acest fel incepand cu PHP 5.4. - [php.net](http://php.net/manual/function.error-reporting.php)
 
-**Reporting every possible error by PHP version**
+Nivelul de erori `E_STRICT` a fost introdus in 5.3.0 si nu facea parte din
+`E_ALL`, dar totusi a devenit parte din `E_ALL` in 5.4.0. Ce inseamna asta?
+In termeni de raportarea fiecarei posibile erori in 5.3 inseamna ca trebuie
+sa folosesti ori `-1` ori `E_ALL | E_STRICT`.
+
+
+**Raportare toate erorile posibile in functie de versiunea PHP**
 
 * &lt; 5.3 `-1` or `E_ALL`
 * &nbsp; 5.3 `-1` or `E_ALL | E_STRICT`
 * &gt; 5.3 `-1` or `E_ALL`
 
-### Production
+### Productie
 
-To hide errors on your <strong>production</strong> environment, configure your `php.ini` as:
+Pentru a ascunde erorile pe mediul vostru de <strong>productie</strong>, configurati-va `php.ini`
+precum:
 
     display_errors = Off
     display_startup_errors = Off
     error_reporting = E_ALL
     log_errors = On
 
-With these settings in production, errors will still be logged to the error logs for the web server, but will not be 
-shown to the user. For more information on these settings, see the PHP manual:
+Cu aceste setari in productie, erorile vor fi inregistrate in log-urile de erori de pe serverul web,
+dar nu vor fi afisate utilizatorului. Pentru mai multe informatii despre
+aceste setari, consultati manualul PHP:
 
 * [error_reporting](http://php.net/manual/errorfunc.configuration.php#ini.error-reporting)
 * [display_errors](http://php.net/manual/errorfunc.configuration.php#ini.display-errors)

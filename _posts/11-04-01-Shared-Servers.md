@@ -2,6 +2,12 @@
 isChild: true
 ---
 
-## Shared Servers {#shared_servers_title}
+## Servere comune {#shared_servers_title}
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If your project's budget can afford to avoid shared servers you should.
+PHP are serverelor comune (partajate) sa le multumeasca pentru popularitatea sa.
+E greu sa gasesti o gazda fara PHP instalat, dar incearca sa te asiguri ca este ultima versiune.
+Serverele comune iti permit tie si altor programatori sa lansezi siteuri pe o singura
+masina. Partea buna este ca a devenit un bun de larg consum. Partea proasta este ca
+nu stii niciodata ce fel de scandal vor creea vecinii tai; incarcand astfel serverul
+sau deschizand gauri de securitate. Daca bugetul proiectului tau iti permite sa eviti
+servere comune atunci e bine sa o faci.

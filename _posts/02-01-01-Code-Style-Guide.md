@@ -40,7 +40,7 @@ lucra cu bucata de cod.
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
-[pear-cs]: http://pear.php.net/manual/en/standards.php
+[pear-cs]: http://pear.php.net/manual/ro/standards.php
 [zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
