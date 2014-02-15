@@ -1,48 +1,50 @@
 ---
 layout: page
-title: The Basics
+title: Bazele
 ---
 
-# The Basics
+# Bazele
 
-## Comparison operators
+## Operatori de comparatie
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+Operatorii de comparatie sunt un aspect deseori trecut cu vederea in PHP, lucru care poate
+duce la situatii neprevazute. O asemenea problema izvoraste din comparatii stricte
+(comparatia booleana sau a integer-ilor).
 
 {% highlight php %}
 <?php
-$a = 5;   // 5 as an integer
+$a = 5;   // 5 ca un integer
 
-var_dump($a == 5);       // compare value; return true
-var_dump($a == '5');     // compare value (ignore type); return true
-var_dump($a === 5);      // compare type/value (integer vs. integer); return true
-var_dump($a === '5');    // compare type/value (integer vs. string); return false
+var_dump($a == 5);       // compara valoarea; return true
+var_dump($a == '5');     // compara valoarea (ignore type); return true
+var_dump($a === 5);      // compara tip/valoare (integer vs. integer); return true
+var_dump($a === '5');    // compara tip/valoare (integer vs. string); return false
 
 /**
- * Strict comparisons
+ * Comparatii stricte
  */
-if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
+if (strpos('testing', 'test')) {    // 'test' este gasit la pozitia 0, care e interpretat ca bool-eanul 'false'
     // code...
 }
 
 vs.
 
-if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
+if (strpos('testing', 'test') !== false) {    // true, intrucat o comparatie stricta a fost facuta (0 !== false)
     // code...
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/manual/en/language.operators.comparison.php)
-* [Comparison table](http://php.net/manual/en/types.comparisons.php)
+* [Operatori de comparatie](http://php.net/manual/en/language.operators.comparison.php)
+* [Tabel de comparatie](http://php.net/manual/en/types.comparisons.php)
 
-## Conditional statements
+## Instructiuni conditionale
 
-### If statements
+### Instructiuni If
 
-While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+Cand folosesti instructiuni 'if/else' intr-o functie sau clasa, exista conceptia gresita
+ca si 'else' trebuie folosit pentru a declara rezultate potentiale. Totusi daca rezultatul
+este de a defini valoarea de return, 'else' nu e necesar intrucat return va intrerupe functia,
+cauzand 'else' sa devina superflua.
 
 {% highlight php %}
 <?php
@@ -62,36 +64,37 @@ function test($a)
     if ($a) {
         return true;
     }
-    return false;    // else is not necessary
+    return false;    // else nu e necesar
 }
 {% endhighlight %}
 
-* [If statements](http://php.net/manual/en/control-structures.if.php)
+* [Instructiuni if](http://php.net/manual/en/control-structures.if.php)
 
-### Switch statements
+### Instructiuni switch
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
-
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
+Instructiunile switch sunt o buna metoda de a evita sa tastezi if-uri si elseif-uri la nesfarsit,
+dar cu cateva conditii de retinut:
+- Instructiunile switch compara numai valori, si nu tipul (echivalentul lui '==')
+- Ele itereaza caz dupa caz pana o potrivire este gasita. Daca nici o potrivire nu e
+gasita, atunci default-ul este folosit (daca e definit)
+- Fara un 'break', vor continua sa implementeze fiecare caz pana ating un break/return
+- Intr-o functie, folosirea lui 'return' suplineste nevoia de a folosi 'break' intrucat termina functia
 
 {% highlight php %}
 <?php
-$answer = test(2);    // the code from both 'case 2' and 'case 3' will be implemented
+$answer = test(2);    // codul de la 'cazul 2' si 'cazul 3' va fi implementat
 
 function test($a)
 {
     switch ($a) {
         case 1:
             // code...
-            break;             // break is used to end the switch statement
+            break;             // break este folosit pentru a sfarsi instructiunea switch
         case 2:
-            // code...         // with no break, comparison will continue to 'case 3'
+            // code...         // fara break comparatia va continua spre 'cazul 3'
         case 3:
             // code...
-            return $result;    // within a function, 'return' will end the function
+            return $result;    // intr-o functie, 'return' va sfarsi functia
         default:
             // code...
             return $error;
@@ -99,13 +102,14 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/manual/en/control-structures.switch.php)
+* [Instructiuni Switch](http://php.net/manual/en/control-structures.switch.php)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## Namespace-ul global
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this,
-refer to the global function by using a backslash before the function name.
+Cand folosesti namespace-uri(spatii de nume), poti descoperi ca functii interne au fost ascunse
+de functii scrise de tine. Pentru a repara asta te poti referi la functia globala folosind
+un backslash inainte de numele functiei.
 
 {% highlight php %}
 <?php
@@ -113,173 +117,178 @@ namespace phptherightway;
 
 function fopen()
 {
-    $file = \fopen();    // Our function name is the same as an internal function.
-                         // Execute the function from the global space by adding '\'.
+    $file = \fopen();    // Numele functiei noastre este identic cu cel al unei functii interne.
+                         // Executa functia din spatiul global prin adaugarea lui '\'.
 }
 
 function array()
 {
-    $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
-                                         // will attempt to resolve it within your namespace.
+    $iterator = new \ArrayIterator();    // ArrayIterator este o clasa interna.
+                                         // Folosirea numelui sau fara un backslash
+                                         // va incerca sa il rezolve in namespace-ul tau.
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/manual/en/language.namespaces.global.php)
-* [Global rules](http://php.net/manual/en/userlandnaming.rules.php)
+* [Spatiul global](http://php.net/manual/en/language.namespaces.global.php)
+* [Reguli lobale](http://php.net/manual/en/userlandnaming.rules.php)
 
-## Strings
+## String-uri
 
-### Concatenation
+### Concatenatie
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it's best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
-
+- Daca linia ta se extinde dincolo de lungimea recomandata(120 de caractere). considera concatenarea ei.
+- Pentru o citire mai usoara este bine sa folosesti operatorii de concatenare si nu operatorii de asignare concatenare
+- Pe cand esti inauntrul scope-ului original al variabilei, ident-eaza atunci cand concatenarea
+foloseste un nou rand
 
 {% highlight php %}
 <?php
-$a  = 'Multi-line example';    // concatenating assignment operator (.=)
+$a  = 'Multi-line example';    // operator de asignare concatenare (.=)
 $a .= "\n";
 $a .= 'of what not to do';
 
 vs.
 
-$a = 'Multi-line example'      // concatenation operator (.)
-    . "\n"                     // indenting new lines
+$a = 'Multi-line example'      // operator de concatenare (.)
+    . "\n"                     // indentarea noilor randuri
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/manual/en/language.operators.string.php)
+* [Operatori string-uri](http://php.net/manual/en/language.operators.string.php)
 
-### String types
+### Tipuri de stringuri
 
-String types are a constant feature within the PHP community, but hopefully this section will explain the
-differences between the string types and their benefits/uses.
+Tipurile de stringuri sunt o functionalitate constanta in comunitatea PHP, dar speram ca aceasta sectiune
+va explica diferentele dintre tipurile de stringuri si beneficiile/utilizarile lor.
 
-#### Single quotes
+#### Ghilimele simple
 
-Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
-parsing the string (doesn't parse for variables). They're best suited for:
+Ghilimelele simple sunt cea mai simpla cale de a defini un string si deseori cea mai rapida.
+Viteza lor porneste din faptul ca PHP nu parseaza string-ul (nu parseaza dupa variabile).
+Sunt cele potrivite pentru:
 
-- Strings that do not need to be parsed
-- Writing of a variable into plain text
+- String-uri care nu vor fi parsate
+- Scrierea unei variabile in text obisnuit
 
 {% highlight php %}
 <?php
-echo 'This is my string, look at how pretty it is.';    // no need to parse a simple string
+echo 'Acesta este string-ul meu, priveste ce frumos este el.';    // nu e nevoie sa fie parsat un simplu string
 
 /**
- * Output:
+ * Rezultat:
  *
- * This is my string, look at how pretty it is.
+ * Acesta este string-ul meu, priveste ce frumos este el.
  */
 {% endhighlight %}
 
-* [Single quote](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
+* [Ghilimele simple](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
 
-#### Double quotes
+#### Ghilimele duble
 
 Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best
 suited for:
+Ghilimelele duble sunt briceagul string-urilor, dar sunt mai lente datorita faptului ca string-ul este
+parsat. Sunt cele mai potrivite pentru:
 
-- Escaped strings
-- Strings with multiple variables and plain text
-- Condensing multi-line concatenation, and improving readability
+- String-uri escape-uite
+- Stringuri cu variabile multiple si text simplu
+- Condensarea concatenatiei de multe randuri, si imbunatatirea lizibilitatii
 
 {% highlight php %}
 <?php
-echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
-    . "\n"                                       // variables and escaped string
+echo 'phptherightway is ' . $adjective . '.'     // un exemplu cu ghilimele simple care foloseste concatenare
+    . "\n"                                       // multipla pentru variabile si string-uri escape-ate
     . 'I love learning' . $code . '!';
 
 vs.
 
-echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
-                                                               // enables us to use a parsable string
+echo "phptherightway is $adjective.\n I love learning $code!"  // In loc de concatenare multipla, ghilimelele
+                                                               // duble ne permit sa folosim un string parsabil
 {% endhighlight %}
 
-While using double quotes that contain variables, it's often the case that the variable will be touching another
-character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
-wrap the variable within a pair of curly brackets.
+Cand folosim ghilimele duble care contin variabile, deseori se poate intampla ca variabila sa atinga
+alt caracter. Asta va rezulta in incapacitatea PHP de a parsa variabila intrucat e camuflata. Pentru
+a repara aceasta problema, infasoara variabila cu o pereche de acolade.
 
 {% highlight php %}
 <?php
 $juice = 'plum';
-echo "I drank some juice made of $juices";    // $juice cannot be parsed
+echo "I drank some juice made of $juices";    // $juice nu poate fi parsat
 
 vs.
 
 $juice = 'plum';
-echo "I drank some juice made of {$juice}s";    // $juice will be parsed
+echo "I drank some juice made of {$juice}s";    // $juice va fi parsat
 
 /**
- * Complex variables will also be parsed within curly brackets
+ * Variabile complexe vor si si ele parsate in acolade
  */
 
 $juice = array('apple', 'orange', 'plum');
-echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
+echo "I drank some juice made of {$juice[1]}s";   // $juice[1] va fi parsat
 {% endhighlight %}
 
-* [Double quotes](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
+* [Ghilimele duble](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Sintaxa Nowdoc
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the
-use of multi-line strings without the need for concatenating.
+Sintaxa Nowdoc a fost introdusa in 5.3 si intern se comporta la fel ca si ghilimelele simple cu
+exceptia ca este menit pentru string-urile multi-rand fara nevoia de a concatena.
 
 {% highlight php %}
 <?php
-$str = <<<'EOD'             // initialized by <<<
-Example of string
-spanning multiple lines
-using nowdoc syntax.
-$a does not parse.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+$str = <<<'EOD'             // initializat de <<<
+Exemplu de string ce se
+intinde pe mai multe randuri
+folosind sintaxa nowdoc.
+$a nu este parsat.
+EOD;                        // 'EOD' de inchidere trebuie sa fie pe propriul rand, si in cel mai stang punct posibil
 
 /**
- * Output:
+ * Rezultat:
  *
- * Example of string
- * spanning multiple lines
- * using nowdoc syntax.
- * $a does not parse.
+ * Exemplu de string ce se
+ * intinde pe mai multe randuri
+ * folosind sintaxa nowdoc.
+ * $a nu este parsat.
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
+* [Sintaxa Nowdoc](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Sintaxa Heredoc
 
-Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line
-strings without the need for concatenating.
+Sintaxa Heredoc se comporta intern ca si ghilimelele duble cu exceptia ca este menit pentru uzul
+string-urilor de mai multe randuri fara sa fie nevoie de concatenare.
 
 {% highlight php %}
 <?php
-$a = 'Variables';
+$a = 'Variabilele';
 
-$str = <<<EOD               // initialized by <<<
-Example of string
-spanning multiple lines
-using heredoc syntax.
-$a are parsed.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+$str = <<<EOD               // initializat de <<<
+Exemplu de string ce se
+intinde pe mai multe randuri
+folosind sintaxa heredoc.
+$a sunt parsate.
+EOD;                        // 'EOD' de inchidere trebuie sa fie pe propriul rand, si in cel mai stang punct posibil
 
 /**
- * Output:
+ * Rezultat:
  *
- * Example of string
- * spanning multiple lines
- * using heredoc syntax.
- * Variables are parsed.
+ * Exemplu de string ce se
+ * intinde pe mai multe randuri
+ * folosind sintaxa heredoc.
+ * Variabilele sunt parsate.
  */
 {% endhighlight %}
 
-* [Heredoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+* [Sintaxa Heredoc](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
 
-## Ternary operators
+## Operatori ternari
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+Operatorii ternari sunt o buna cale de a condensa cod, dar deseori sunt folosit in exces.
+Desi operatorii ternari pot fi stivuiti/cuibariti, este recomandat sa fie folositi unul
+pe rand pentru lizibilitate.
 
 {% highlight php %}
 <?php
@@ -288,41 +297,41 @@ echo ($a == 5) ? 'yay' : 'nay';
 
 vs.
 
-// nested ternary
+// ternar stivuit
 $b = 10;
-echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
+echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // stivuire in exces, sacrifica lizibilitatea
 {% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+Pentru a returna o valoare cu operatori ternari foloseste sintaxa corecta.
 
 {% highlight php %}
 <?php
 $a = 5;
-echo ($a == 5) ? return true : return false;    // this example will output an error
+echo ($a == 5) ? return true : return false;    // acest exemplu va produce o eroare
 
 vs.
 
 $a = 5;
-return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+return ($a == 5) ? 'yay' : 'nope';    // acest exemplu va returna 'yay'
 {% endhighlight %}
 
-* [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
+* [Operatori ternari](http://php.net/manual/en/language.operators.comparison.php)
 
-## Variable declarations
+## Declaratii de variabile
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let's say
-an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
-2MB.
+Uneori, programatorii incearca sa isi faca codul "mai clar" declarand variabile predefinite cu un alt nume.
+Ceeace face asta in realitate este de a dubla consumul de memorie al respectivului script.
+Pentru exemplul de mai jos, sa zicem un string exemplu contine 1MB de date, copiind variabila ai
+incrementat executia scriptului la 2MB.
 
 {% highlight php %}
 <?php
-$about = 'A very long string of text';    // uses 2MB memory
+$about = 'Un foarte lung string de text';    // foloseste 2MB de memorie
 echo $about;
 
 vs.
 
-echo 'A very long string of text';        // uses 1MB memory
+echo 'Un foarte lung string de text';        // foloseste 1MB de memorie
 {% endhighlight %}
 
-* [Performance tips](https://developers.google.com/speed/articles/optimizing-php)
+* [Sfaturi pentru performanta](https://developers.google.com/speed/articles/optimizing-php)
