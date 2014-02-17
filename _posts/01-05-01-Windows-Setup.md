@@ -7,11 +7,11 @@ isChild: true
 PHP e disponibil sub diferite forme pe Windows. Îl poți descărca sub formă de [binare][php-downloads] și până recent puteai folosi
 un instalator '.msi', dar acesta nu mai e disponibil după PHP 5.3.0.
 
-Pentru a învăța și pentru dezvoltare locală poți folosi webserver-ul incorporat cu PHP 5.4+ așa încât nu ai nevoie
-sa îl configurezi. Dacă ți-ar plăcea un "totul-inclus" care include un webserver serios și de asemenea MySQL atunci
-unelte precum [Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp] si [WAMP][wamp] te vor
+Pentru a învăța și pentru dezvoltare locală poți folosi webserver-ul încorporat cu PHP 5.4+ așa încât nu ai nevoie
+să îl configurezi. Dacă ți-ar plăcea un "totul-inclus" care include un webserver serios și de asemenea MySQL atunci
+unelte precum [Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp] şi [WAMP][wamp] te vor
 ajuta să obții rapid un mediu de dezvoltare pe Windows. Acestea fiind spuse, aceste unele vor fi puțin diferite
-fata de mediul de producție, și trebuie sa ții cont de posibile diferențe mai ales dacă lansezi codul pe Linux.
+faţă de mediul de producție, și trebuie sa ții cont de posibile diferențe mai ales dacă lansezi codul pe Linux.
 
 
 Dacă ai nevoie să rulezi sistemul de producție pe Windows atunci IIS7 iți va da cea mai mare stabilitate și cea mai bună performanță.
