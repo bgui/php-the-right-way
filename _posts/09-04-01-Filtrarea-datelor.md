@@ -27,7 +27,7 @@ escape-ând caractere cu sens special în entitățile lor HTML respective folos
 funcțiile `htmlentities` sau `htmlspecialchars`.
 
 Alt exemplu este pasarea opțiunilor ce vor fi executate în linia de comandă. Aceasta poate
-fi extrem de periculos (și e de obicei o idee rea), dar poți folosi funcția incorporată
+fi extrem de periculos (și e de obicei o idee rea), dar poți folosi funcția încorporată
 `escapeshellarg` pentru a sanitiza argumentele comenzii executate.
 
 Un ultim exemplu este acceptarea intrărilor străine pentru a determina un fișier

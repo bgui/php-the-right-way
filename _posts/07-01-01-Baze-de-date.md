@@ -21,7 +21,7 @@ mysql: folosește [extensia MySQLi][mysqli] sau PDO._
 
 ## PDO
 
-PDO este o bibliotecă de abstractizare a conexiunii cu baza de date &mdash; ce vine incorporată în PHP de la 5.1.0 &mdash; și
+PDO este o bibliotecă de abstractizare a conexiunii cu baza de date &mdash; ce vine încorporată în PHP de la 5.1.0 &mdash; și
 pune la dispoziție o interfață comună de a vorbi cu diferite baze de date. PDO nu va traduce interogările tale SQL și nici nu
 va emula funcționalități lipsă; este doar pentru a conecta la mai multe tipuri de baze de date prin același API.
 

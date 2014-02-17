@@ -24,8 +24,8 @@ Următorul exemplu ilustrează șablonul:
 <?php
 class Automobile
 {
-    private $vehicle_make;
-    private $vehicle_model;
+     private $vehicle_make;
+     private $vehicle_model;
 
     public function __construct($make, $model)
     {
@@ -267,6 +267,7 @@ modele și încarcă view-urile pentru a trimite răspunsul. View-urile sunt tem
 etc care sunt trimise în răspuns către browserul web.
 
 MVC este cel mai comun șablon de proiectare arhitecturală folosit în [framework-urile PHP populare](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+
 Află mai multe despre MVC și rudele sale:
 
 * [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)

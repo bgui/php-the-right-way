@@ -47,7 +47,7 @@ print_r($data);
 
 De notat ca înainte de PHP 5.5, APC pune la dispoziție atât un cache de obiecte cât și un cache de bytecode.
 APCu este un proiect care aduce cache-ul de obiecte al lui APC în PHP 5.5+, întrucât PHP are de acum deja un
-bytecode cache incorporat (OPCache).
+bytecode cache încorporat (OPCache).
 
 Află mai multe despre sisteme populare de cache al obiectelor:
 
