@@ -1,7 +1,7 @@
 # Bine ai venit
 
 Există multă informație perimată existentă pe Web care induce noii utilizatori PHP în eroare,
-propagând răi practici și cod nesigur. _PHP: The Right Way_ este o referință rapidă și ușor de citit,
+propagând rele practici și cod nesigur. _PHP: The Right Way_ este o referință rapidă și ușor de citit,
 pentru standarde populare de programare PHP, link-uri către tutoriale cu autoritate de pe web și
 ceea ce consideră contributorii ca sunt cele mai bune practici în prezent.
 
