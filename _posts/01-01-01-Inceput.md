@@ -1,2 +1,2 @@
-# Început {php-the-right-ray/#inceput_title}
+# Început {#inceput_title}
 

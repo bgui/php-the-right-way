@@ -3,7 +3,7 @@ title: Web Server incorporat
 isChild: true
 ---
 
-## Web Server încorporat {php-the-right-ray/#web_server_incorporat_title}
+## Web Server încorporat {#web_server_incorporat_title}
 
 Poți începe să înveți PHP fără bătaia de cap a instalării unui întreg web server
 (ai nevoie de PHP 5.4+). Pentru a porni serverul, execută urmatoarea comandă
