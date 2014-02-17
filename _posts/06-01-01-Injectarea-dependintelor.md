@@ -2,7 +2,7 @@
 title: Injectarea dependințelor
 ---
 
-# Injectarea dependințelor {#dependency_injection_title}
+# Injectarea dependințelor {#injectarea_dependintelor_title}
 
 Din [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
 

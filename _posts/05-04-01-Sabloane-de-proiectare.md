@@ -3,7 +3,7 @@
 isChild: true
 ---
 
-## Șabloane de proiectare {#design_patterns_title}
+## Șabloane de proiectare {#sabloane_de_proiectare_title}
 
 Când îți construiești aplicația e util să folosești șabloane popular folosite (design patterns) atât în codul tău cât și în structura
 proiectului. Folosirea acestor șabloane comun întâlnite este utilă deoarece face mult mai ușor de administrat codul

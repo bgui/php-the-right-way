@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Paradigme {#programming_paradigms_title}
+## Paradigme {#paradigme_de_programare_title}
 
 PHP este un limbaj flexibil, dinamic, care suportă o varietate de tehnici de programare. A evoluat dramatic peste ani,
 notabile fiind adăugarea solidului model orientat obiect în PHP 5.0 (2004), funcțiile anonime și namespace-uri în PHP 5.3

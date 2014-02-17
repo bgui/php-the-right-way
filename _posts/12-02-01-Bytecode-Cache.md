@@ -14,7 +14,7 @@ bytecode în memorie și refolosindu-l la apelări ulterioare.
 Setarea cache-ului de bytecode este o chestiune de minute, și aplicația ta va fi semnificativ
 mai rapidă. Nu prea există motive de a nu îl folosi.
 
-Începând cu PHP 5.5, există un cache de bytecode incorporat numit [OPCache](http://php.net/manual/ro/book.opcache.php). Este disponibil și pentru versiuni mai vechi.
+Începând cu PHP 5.5, există un cache de bytecode încorporat numit [OPCache](http://php.net/manual/ro/book.opcache.php). Este disponibil și pentru versiuni mai vechi.
 
 Alte cache-uri de bytecode populare sunt:
 

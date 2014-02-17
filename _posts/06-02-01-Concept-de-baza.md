@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Concept de bază {#basic_concept_title}
+## Concept de bază {#concept_de_baza_title}
 
 Putem demonstra conceptul cu un simplu, deși naiv exemplu.
 

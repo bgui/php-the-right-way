@@ -2,12 +2,12 @@
 isChild: true
 ---
  
-## Construcția și lansarea aplicației tale {#build_title}
+## Asamblarea și lansarea aplicației tale {#asamblarea_title}
  
 Dacă te surprinzi modificând schema bazei de date manual sau rulând testele manual înaintea actualizării
 fișierelor tale(manual), mai gândește-te! Cu fiecare task manual adițional necesar pentru lansarea unei noi
 versiuni a aplicației tale, șansa unor greșeli fatale crește dacă ai de-a face cu un simplu update,
-un proces de construcție complicat sau chiar o strategie de integrare continuă, [automatizarea construcției]
+un proces de construcție complicat sau chiar o strategie de integrare continuă, [automatizarea asamblării]
 (http://en.wikipedia.org/wiki/Build_automation) este prietena ta.
  
 Printre pașii pe care ai putea dori sa îi automatizezi s-ar putea numără:
@@ -20,13 +20,13 @@ Printre pașii pe care ai putea dori sa îi automatizezi s-ar putea numără:
 * Lansare (deployment)
  
  
-### Unelte de automatizare a construcției
+### Unelte de automatizare a asamblării
  
-Unelte pentru construcția aplicației pot fi descrise ca o colecție de scripturi care execută instrucțiuni des
-întâlnite în dezvoltarea de software. Unealta de construcție nu este parte a software-ului tău, ea acționează
+Unelte pentru asamblarea aplicației pot fi descrise ca o colecție de scripturi care execută instrucțiuni des
+întâlnite în dezvoltarea de software. Unealta de asamblare nu este parte a software-ului tău, ea acționează
 asupra soft-ului tău din 'afară'.
  
-Există multe unelte open source disponibile care te pot ajuta cu automatizarea construcției, unele sunt scrise în PHP
+Există multe unelte open source disponibile care te pot ajuta cu automatizarea asamblarii, unele sunt scrise în PHP
 iar altele nu. Asta nu ar trebui să te descurajeze din a le folosi, dacă sunt mai bine potrivite pentru
 jobul respectiv. Aici sunt câteva exemple:
  
@@ -55,7 +55,7 @@ Resurse Chef pentru programatori PHP:
 Lecturi aprofundate:
  
 * [Automatizează-ți proiectul cu Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
-* [Maven](http://maven.apache.org/), un framework pentru automatizarea construcției (build) bazat pe Ant și
+* [Maven](http://maven.apache.org/), un framework pentru automatizarea asamblării (build) bazat pe Ant și
 [cum să-l folosești cu PHP](http://www.php-maven.org/)
  
 ### Integrare continuă
