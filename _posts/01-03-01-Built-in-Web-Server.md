@@ -1,5 +1,5 @@
 ---
-title: Web Server încorporat
+title: Web Server incorporat
 isChild: true
 ---
 
