@@ -2,34 +2,34 @@
 isChild: true
 ---
 
-## Problema Complexa {#complex_problem_title}
+## Problema Complexă {#complex_problem_title}
 
-Daca ai citit vreodata despre injectarea dependintelor atunci ai vazut probabil termenii *"Inversiunea Controlului"*
-sau *"Principiul inversiunii dependintei"*.
-Acestea sunt problemele complexe pe care injectarea dependintelor le rezolva.
+Dacă ai citit vreodată despre injectarea dependințelor atunci ai văzut probabil termenii *"Inversiunea Controlului"*
+sau *"Principiul inversiunii dependinței"*.
+Acestea sunt problemele complexe pe care injectarea dependințelor le rezolvă.
 
 ### Inversiunea controlului
 
-Inversiunea controlului este, dupa cum se aude, inversiunea controlului unui sistem prin pastrarea controlului
-organizational complet separat de obiectele noastre.
-In termeni de injectarea dependintelor, asta inseamna flexibilizarea dependintelor noastre prin
-controlul si instantierea lor in alta parte a sistemului.
+Inversiunea controlului este, după cum se aude, inversiunea controlului unui sistem prin păstrarea controlului
+organizațional complet separat de obiectele noastre.
+În termeni de injectarea dependințelor, asta înseamnă flexibilizarea dependințelor noastre prin
+controlul și instanțierea lor în altă parte a sistemului.
 
-De ani, framework-urile PHP realizau inversiunea controlului, dar, intrebarea a devenit, care parte
-a controlului o inversezi, si spre ce? De exemplu, framework-urile MVC puneai la dispozitie un
-super obiect sau controller de baza pe care alte controllere trebuiau sa le extinda pentru a primi
-acces la dependintele sale. Aceasta **este** inversiune a controlului, insa, in loc de flexibilizare
-a dependintelor, aceasta metoda le muta doar in alta parte.
+De ani, framework-urile PHP realizau inversiunea controlului, dar, întrebarea a devenit, care parte
+a controlului o inversezi, și spre ce? De exemplu, framework-urile MVC puneau la dispoziție un
+super obiect sau controller de bază pe care alte controllere trebuiau să le extindă pentru a primi
+acces la dependințele sale. Aceasta **este** inversiune a controlului, însă, în loc de flexibilizare
+a dependințelor, această metodă le mută doar în altă parte.
 
-Injectarea dependintelor ne permite sa rezolvam mai elegant aceasta problema prin injectarea numai
-dependintelor de care avem nevoie, cand avem nevoie de ele, fara a fi nevoie sa le explicitam deloc in scris.
+Injectarea dependințelor ne permite să rezolvăm mai elegant această problemă prin injectarea numai
+dependințelor de care avem nevoie, când avem nevoie de ele, fără a fi nevoie să le explicităm deloc în scris.
 
-### Principiul inversiunii dependintelor
+### Principiul inversiunii dependințelor
 
-Principiul inversiunii dependintelor este "D"-ul din setul S.O.L.I.D de principii de proiectare orientata obiect
-care spune ca ar trebui sa *"depinzi de abstractiuni si nu de concret-uri"*. Spus simplu, asta inseamna ca
-dependintele noastre ar trebui sa fie interfete/contracte sau clase abstracte mai degraba decat implementari
-concrete. Putem refactoriza exemplul de mai sus ca sa urmeze acest principiu.
+Principiul inversiunii dependințelor este "D"-ul din setul S.O.L.I.D de principii de proiectare orientată obiect
+care spune că ar trebui să *"depinzi de abstracțiuni și nu de concret-uri"*. Spus simplu, asta înseamnă că
+dependințele noastre ar trebui să fie interfețe/contracte sau clase abstracte mai degrabă decât implementări
+concrete. Putem refactoriza exemplul de mai sus ca să urmeze acest principiu.
 
 {% highlight php %}
 <?php
@@ -50,13 +50,13 @@ interface AdapterInterface {}
 class MysqlAdapter implements AdapterInterface {}
 {% endhighlight %}
 
-Exista cateva beneficii acum ca clasa `Database` depinde de o interfata si nu de ceva concret.
+Exista câteva beneficii acum că clasa `Database` depinde de o interfață și nu de ceva concret.
 
-Imagineaza-ti ca lucrezi in echipa iar colegul tau lucreaza la adaptor. In primul exemplu, ar trebui sa asteptam
-dupa colegul ca sa termine adaptorul inainte de a il mock-ui pentru unit teste. Acum ca dependinta este o
-interfata/contract noi putem sa mock-uim linistiti interfata stiind ca colegul va construi adapterul bazat pe contract.
+Imaginează-ți că lucrezi în echipă iar colegul tău lucrează la adaptor. În primul exemplu, ar trebui să așteptăm
+după colegul ca să termine adaptorul înainte de a îl mock-ui pentru unit teste. Acum că dependința este o
+interfața/contract noi putem să mock-uim liniștiți interfață știind ca colegul va construi adaptorul bazat pe contract.
 
-Un si mai mare beneficiu al acestei metode este ca codul nostru este acum mai scalabil. Daca peste un an vom decide ca
-vrem sa migram la un alt tip de baza de date, putem scrie un adaptor care implementeaza interfata originala si
-sa il injectam pe acela, nici un pic de refactorizare nu ar fi necesara intrucat putem fi siguri ca adaptorul
-respecta contractul setat de interfata.
+Un și mai mare beneficiu al acestei metode este că codul nostru este acum mai scalabil. Dacă peste un an vom decide că
+vrem să migrăm la un alt tip de bază de date, putem scrie un adaptor care implementează interfața originală și
+să îl injectăm pe acela, nici un pic de refactorizare nu ar fi necesară întrucât putem fi siguri că adaptorul
+respectă contractul setat de interfață.

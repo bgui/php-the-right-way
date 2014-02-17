@@ -1,11 +1,11 @@
 # Resurse {#resources_title}
 
-## De la sursa
+## De la sursă
 
 * [Websiteul PHP](http://php.net/)
 * [Documentatia PHP](http://php.net/docs.php)
 
-## Oameni de urmarit
+## Oameni de urmărit
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)
@@ -19,7 +19,7 @@
 
 ## Mentoring
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, mentoring unu la unu in comunitatea PHP.
+* [phpmentoring.org](http://phpmentoring.org/) - Formal, mentoring unu la unu în comunitatea PHP.
 
 ## Furnizori de PHP PaaS
 

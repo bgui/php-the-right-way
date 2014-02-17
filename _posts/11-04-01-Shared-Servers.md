@@ -4,10 +4,10 @@ isChild: true
 
 ## Servere comune {#shared_servers_title}
 
-PHP are serverelor comune (partajate) sa le multumeasca pentru popularitatea sa.
-E greu sa gasesti o gazda fara PHP instalat, dar incearca sa te asiguri ca este ultima versiune.
-Serverele comune iti permit tie si altor programatori sa lansezi siteuri pe o singura
-masina. Partea buna este ca a devenit un bun de larg consum. Partea proasta este ca
-nu stii niciodata ce fel de scandal vor creea vecinii tai; incarcand astfel serverul
-sau deschizand gauri de securitate. Daca bugetul proiectului tau iti permite sa eviti
-servere comune atunci e bine sa o faci.
+PHP are serverelor comune (partajate) să le mulțumească pentru popularitatea sa.
+E greu sa găsești o gazdă fără PHP instalat, dar încearcă să te asiguri că este ultima versiune.
+Serverele comune iți permit ție și altor programatori să lansezi siteuri pe o singură
+mașină. Partea bună este că a devenit un bun de larg consum. Partea proastă este că
+nu știi niciodată ce fel de scandal vor crea vecinii tăi; încărcând astfel serverul
+sau deschizând găuri de securitate. Dacă bugetul proiectului tău iți permite să eviți
+servere comune atunci e bine să o faci.

@@ -4,48 +4,48 @@ isChild: true
 
 ## Paradigme {#programming_paradigms_title}
 
-PHP este un limbaj flexibil, dinamic, care suporta o varietate de tehnici de programare. A evoluat dramatic peste ani,
-notabile fiind adaugarea solidului model orientat obiect in PHP 5.0 (2004), functiile anonime si namespace-uri in PHP 5.3
-(2009), traits in PHP 5.4 (2012).
+PHP este un limbaj flexibil, dinamic, care suportă o varietate de tehnici de programare. A evoluat dramatic peste ani,
+notabile fiind adăugarea solidului model orientat obiect în PHP 5.0 (2004), funcțiile anonime și namespace-uri în PHP 5.3
+(2009), traits în PHP 5.4 (2012).
 
 ### Programare orientata obiect
 
-PHP are un foarte complet set de functionalitati orientate obiect incluzand suport pentru clase, clase abstracte, interfete,
-mostenire, constructori, clonare, exceptii, si multe altele.
+PHP are un complet set de funcționalități orientate obiect incluzând suport pentru clase, clase abstracte, interfețe,
+moștenire, constructori, clonare, excepții, și multe altele.
 
-* [Citeste despre PHP orientat-obiect][oop]
-* [Citeste despre traits][traits]
+* [Citește despre PHP orientat-obiect][oop]
+* [Citește despre traits][traits]
 
-### Programare functionala
+### Programare funcțională
 
-PHP suporta functii de "prima clasa", asta insemnand ca o functie poate fi asignata unei variabile. Atat functii
-definite de utilizator cat si cele definite de limbaj pot fi referentiate de o variabile si invocate dinamic. Functiile
-pot fi furnizate ca argument catre alte functii (functionalitate denumita functii de "Inalt Nivel") sau pot returna alte functii.
+PHP suporta funcții de "prima mână", asta însemnând ca o funcție poate fi asignată unei variabile. Atât funcții
+definite de utilizator cat și cele definite de limbaj pot fi referențiate de o variabilă și invocate dinamic. Funcțiile
+pot fi furnizate ca argument către alte funcții (funcționalitate denumită funcții de "Înalt Nivel") sau pot returna alte funcții.
 
-Recursivitatea, o functionalitate care permite unei functii sa se auto-apeleze este suportata de limbaj, dar majoritatea
-codului PHP se concentreaza pe iteratie.
+Recursivitatea, o funcționalitate care permite unei funcții să se auto-apeleze este suportată de limbaj, dar majoritatea
+codului PHP se concentrează pe iterație.
 
-Noile functii anonime (cu suport pentru closures) sunt prezente incepand cu PHP 5.3 (2009).
+Noile funcții anonime (cu suport pentru closures) sunt prezente începând cu PHP 5.3 (2009).
 
-PHP 5.4 a adaugat abilitatea de a lega closure-uri de scope-ul obiectului si suport imbunatatit pentru callables
-asa incat ele pot fi folosite interschimbabil cu functii anonime in aproape orice caz.
+PHP 5.4 a adăugat abilitatea de a lega closure-uri de scope-ul obiectului și suport îmbunătățit pentru callables
+așa încât ele pot fi folosite interschimbabil cu funcții anonime în aproape orice caz.
 
-* Continua sa citesti pe [Programare functionala in PHP](/pages/Functional-Programming.html)
-* [Citeste despre functii anonime][anonymous-functions]
-* [Citeste despre clasa Closure][closure-class]
-* [Mai multe detalii in RFC-ul despre closure-uri][closures-rfc]
-* [Citeste despre Callables][callables]
-* [Citeste despre invocarea dinamic cu `call_user_func_array`][call-user-func-array]
+* Continuă să citești pe [Programare functionala in PHP](/pages/Functional-Programming.html)
+* [Citește despre funcții anonime][anonymous-functions]
+* [Citește despre clasa Closure][closure-class]
+* [Mai multe detalii în RFC-ul despre closure-uri][closures-rfc]
+* [Citește despre Callables][callables]
+* [Citește despre invocarea dinamic cu `call_user_func_array`][call-user-func-array]
 
 ### Meta programare
 
-PHP suporta diverse forme de meta-programare prin mecanisme ca Reflection API si Metode Magice. Sunt multe metode
+PHP suportă diverse forme de meta-programare prin mecanisme ca Reflection API și Metode Magice. Sunt multe metode
 magice disponibile precum `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. care permit
-dezvoltatorii sa intervina in comportamentul clasei. Programatorii de Ruby spun deseori ca in PHP lipseste `method_missing`,
-dar aceasta e disponibila sub forma `__call()` and `__callStatic()`.
+dezvoltatorii sa intervină în comportamentul clasei. Programatorii de Ruby spun deseori că în PHP lipsește `method_missing`,
+dar aceasta e disponibilă sub forma `__call()` and `__callStatic()`.
 
-* [Citeste despre metode magice][magic-methods]
-* [Citeste despre Reflectie][reflection]
+* [Citește despre metode magice][magic-methods]
+* [Citește despre Reflecție][reflection]
 
 [namespaces]: http://php.net/manual/ro/language.namespaces.php
 [overloading]: http://php.net/manual/ro/language.oop5.overloading.php

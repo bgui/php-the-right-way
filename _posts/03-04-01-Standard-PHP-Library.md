@@ -5,10 +5,10 @@ isChild: true
 
 ## Biblioteca Standard {#standard_php_library_title}
 
-Biblioteca PHP Standard (SPL) este incorporata in PHP si furnizeaza o colectie de clase si interfete. Este facuta in principal
-de clase de structuri de date (stack, queue, heap, s.a.m.d) si iteratori care pot traversa aceste structuri de date sau propriile tale
-clase care implementeaza interfete SPL.
+Biblioteca PHP Standard (SPL) este incorporată în PHP și furnizează o colecție de clase și interfețe. Este făcută în principal
+de clase de structuri de date (stack, queue, heap, s.a.m.d) și iteratori care pot traversa aceste structuri de date sau propriile tale
+clase care implementează interfețe SPL.
 
-* [Citeste despre SPL][spl]
+* [Citește despre SPL][spl]
 
 [spl]: http://php.net/manual/ro/book.spl.php

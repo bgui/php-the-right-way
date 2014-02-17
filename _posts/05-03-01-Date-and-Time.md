@@ -2,15 +2,15 @@
 isChild: true
 ---
 
-## Date si Timp {#date_and_time_title}
+## Date și Timp {#date_and_time_title}
 
-PHP are o clasa numita DateTime pentru a te ajuta la citirea, scrierea, compararea sau calcularea unor date sau timpi.
-Sunt multe functii legate de date si timp in PHP in afara de DateTime, dar ea furnizeaza o interfata usoara si orientata-
-obiect pentru majoritatea cazurilor. Poate manevra fusuri orare, dar asta este in afara aceste scurte introduceri.
+PHP are o clasă numită DateTime pentru a te ajuta la citirea, scrierea, compararea sau calcularea unor date sau timpi.
+Sunt multe funcții legate de date și timp în PHP în afară de DateTime, dar ea furnizează o interfață ușoară și orientata-
+obiect pentru majoritatea cazurilor. Poate manevra fusuri orare, dar asta este în afara aceste scurte introduceri.
 
-Pentru a incepe lucrul cu DateTime, transformi un string brut intr-un obiect cu metoda fabrica `createFromFormat()` sau
-poti face un `new \DateTime` pentru a obtine data si timpul curente. Folosesti metoda `format()` pentru a transforma
-DateTIme inapoi intr-un string pentru afisare.
+Pentru a începe lucrul cu DateTime, transformi un string brut într-un obiect cu metoda fabrică `createFromFormat()` sau
+poți face un `new \DateTime` pentru a obține data și timpul curente. Folosești metoda `format()` pentru a transforma
+DateTime înapoi într-un string pentru afișare.
 
 {% highlight php %}
 <?php
@@ -20,13 +20,13 @@ $start = \DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calcularea cu DateTime este posibila cu clasa DateInterval. DateTime are metode precum `add()` si `sub()` care
-primesc un DateInterval ca argument. Nu scrie cod care presupune acelas numar de secunde in fiecare zi, pentru ca
-atat ora de iarna si alterarile de fus orar vor invalida aceasta asumptie. Foloseste intervale de data pentru asta.
-Pentru a calcula diferenta de data folosete metoda `diff()`. Va returna un nou DateInterval care este super usor de afisat.
+Calcularea cu DateTime este posibilă cu clasa DateInterval. DateTime are metode precum `add()` și `sub()` care
+primesc un DateInterval ca argument. Nu scrie cod care presupune același număr de secunde în fiecare zi, pentru că
+atât ora de iarna și alterările de fus orar vor invalida această asumpție. Folosește intervale de date pentru asta.
+Pentru a calcula diferența de data folosește metoda `diff()`. Va returna un nou DateInterval care este super ușor de afișat.
 {% highlight php %}
 <?php
-// creeaza o copie a lui $start si adauga o luna si 6 zile
+// creează o copie a lui $start și adaugă o lună și 6 zile
 $end = clone $start;
 $end->add(new \DateInterval('P1M6D'));
 
@@ -35,7 +35,7 @@ echo 'Diferenta: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
 // Diferenta: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-Pe obiecte DateTime poti folosi comparatii standard:
+Pe obiecte DateTime poți folosi comparații standard:
 {% highlight php %}
 <?php
 if ($start < $end) {
@@ -43,8 +43,8 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-Un ultim exemplu pentru a demonstra clasa DatePeriod. Este folosita pentru a itera prin evenimente recurente.
-Poate primi doua obiecte DateTime, start si end, si intervalul pentru care va returna toate evenimentele dintre ele.
+Un ultim exemplu pentru a demonstra clasa DatePeriod. Este folosită pentru a itera prin evenimente recurente.
+Poate primi două obiecte DateTime, start și end, și intervalul pentru care va returna toate evenimentele dintre ele.
 {% highlight php %}
 <?php
 // afiseaza toate Joi-ile dintre $start and $end
@@ -56,8 +56,8 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 1
-* [Citeste despre DateTime][datetime]
-* [Citeste despre formatarea datelor][dateformat] (operatiuni string formatare date)
+* [Citește despre DateTime][datetime]
+* [Citește despre formatarea datelor][dateformat] (operațiuni string formatare date)
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php

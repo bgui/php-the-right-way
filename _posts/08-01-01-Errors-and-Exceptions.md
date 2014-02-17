@@ -1,6 +1,6 @@
 ---
-title: Erori si Exceptii
+title: Erori și Excepții
 ---
 
-# Erori si exceptii {#errors_and_exceptions_title}
+# Erori și excepții {#errors_and_exceptions_title}
 

@@ -1,3 +1,3 @@
-# Servere si Lansare {#servers_and_deployment_title}
+# Servere și Lansare {#servers_and_deployment_title}
 
-Aplicatiile PHP pot fi lansate (deployed) si rulate pe servere de productie intr-un numar de moduri.
+Aplicațiile PHP pot fi lansate (deployed) și rulate pe servere de producție într-un număr de moduri.

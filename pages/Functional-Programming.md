@@ -1,39 +1,40 @@
 ---
 layout: page
-title: Functional Programming in PHP
+title: Programare funcțională în PHP
 ---
 
-# Functional Programming in PHP
+# Programare funcțională în PHP
 
-PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and built-in 
-functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions and a function can return other functions (a feature called higher-order functions).
+PHP suportă funcții de "prima mână", asta însemnând că o funcție poate fi asignată unei variabile. Atât funcții
+definite de utilizator cat și cele definite de limbaj pot fi referențiate de o variabilă și invocate dinamic. Funcțiile
+pot fi furnizate ca argument către alte funcții sau pot returna alte funcții (funcționalitate denumită funcții de "Înalt Nivel").
 
-Recursion, a feature that allows a function to call itself, is supported by the language, but most of the PHP code focus
-is on iteration.
+Recursivitatea, o funcționalitate care permite unei funcții să se auto-apeleze este suportată de limbaj, dar majoritatea
+codului PHP se concentrează pe iterație.
 
-Anonymous functions (with support for closures) have been present since PHP 5.3 (2009).
+Noile funcții anonime (cu suport pentru closures) sunt prezente începând cu PHP 5.3 (2009).
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+PHP 5.4 a adăugat abilitatea de a lega closure-uri de scope-ul obiectului și suport îmbunătățit pentru callables
+așa încât ele pot fi folosite interschimbabil cu funcții anonime în aproape orice caz.
 
-The most common usage of higher-order functions is when implementing a strategy pattern. The built-in `array_filter`
-function asks both for the input array (data) and a function (a strategy or a callback) used as a filter function on
-each array item.
+Cel mai des întâlnit uz al funcțiilor de nivel înalt este când este implementat șablonul strategie.
+Funcția incorporată `array_filter` cere array-ul de intrare (data) și o funcție
+(o strategie sau o callback) folosită ca filtru pe fiecare element din array.
+
 
 {% highlight php %}
 <?php
 $input = array(1, 2, 3, 4, 5, 6);
 
-// Creates a new anonymous function and assigns it to a variable
+// Creează o nouă funcție anonimă și o asignează unei variabile
 $filter_even = function($item) {
     return ($item % 2) == 0;
 };
 
-// Built-in array_filter accepts both the data and the function
+// funcția incorporată array_filter primește atât datele cât și funcția
 $output = array_filter($input, $filter_even);
 
-// The function doesn't need to be assigned to a variable. This is valid too:
+// Funcția nu are nevoie să fie asignată unei variabile. Și asta e valid:
 $output = array_filter($input, function($item) {
     return ($item % 2) == 0;
 });
@@ -41,19 +42,20 @@ $output = array_filter($input, function($item) {
 print_r($output);
 {% endhighlight %}
 
-A closure is an anonymous function that can access variables imported from the outside scope without using any global
-variables. Theoretically, a closure is a function with some arguments closed (e.g. fixed) by the environment when it is 
-defined. Closures can work around variable scope restrictions in a clean way.
+O closure este o funcție anonimă care poate accesa variabile importate din afara scope-ului
+fără a folosi nici o variabilă globală. Teoretic, o closure este o funcție cu unele
+argumente închise (fixați) de către mediu atunci când este definită. Closure-urile pot ocoli
+restricțiile de scope ale variabilelor într-un mod curat.
 
-In the next example we use closures to define a function returning a single filter function for `array_filter`, out of
-a family of filter functions.
+În următorul exemplu folosim closure-uri pentru a defini o funcție ce returnează
+o singură funcție filtru pentru `array_filter`, dintr-o familie de funcții filtru.
 
 {% highlight php %}
 <?php
 /**
- * Creates an anonymous filter function accepting items > $min
+ * Creează o funcție filtru anonimă care acceptă elemente > $min
  *
- * Returns a single filter out of a family of "greater than n" filters
+ * Returnează un singur filtru dintr-o familie de filtre "mai mare ca n"
  */
 function criteria_greater_than($min)
 {
@@ -64,23 +66,25 @@ function criteria_greater_than($min)
 
 $input = array(1, 2, 3, 4, 5, 6);
 
-// Use array_filter on a input with a selected filter function
+// Folosește array_filter pe un input cu o funcție filtru selectată
 $output = array_filter($input, criteria_greater_than(3));
 
 print_r($output); // items > 3
 {% endhighlight %}
 
-Each filter function in the family accepts only elements greater than some minimum value. Single filter returned by 
-`criteria_greater_than` is a closure with `$min` argument closed by the value in the scope (given as an argument when 
-`criteria_greater_than` is called).
+Fiecare funcție filtru din familie acceptă numai elemente mai mari decât o valoare minimă.
+Singurul filtru returnat de `criteria_greater_than` este un closure cu argumentul `$min` închis
+de valoarea din scope (pasat ca argument când `criteria_greater_than` este apelat).
 
-Early binding is used by default for importing `$min` variable into the created function. For true closures with late
-binding one should use a reference when importing. Imagine a templating or input validation library, where closure is 
-defined to capture variables in scope and access them later when the anonymous function is evaluated.
+"Early Binding" este folosit pentru importarea variabilei `$min` în funcția creată.
+Pentru closure-uri adevărate cu "late binding" ar trebui să folosești referințe când imporți.
+Imaginează-ți o bibliotecă de șabloane sau de validarea intrărilor, unde closure este
+definită pentru a captura variabile în scope și de a le accesa mai târziu când funcția anonimă e evaluată.
 
-* [Read about Anonymous functions][anonymous-functions]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+
+* [Citește despre funcții anonime][anonymous-functions]
+* [Mai multe detalii în RFC-ul closures][closures-rfc]
+* [Citește despre invocarea dinamică de funcții cu `call_user_func_array`][call-user-func-array]
 
 [anonymous-functions]: http://www.php.net/manual/en/functions.anonymous.php
 [call-user-func-array]: http://php.net/manual/en/function.call-user-func-array.php

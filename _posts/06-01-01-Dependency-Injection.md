@@ -1,14 +1,14 @@
 ---
-title: Injectarea dependintelor
+title: Injectarea dependințelor
 ---
 
-# Injectarea dependintelor {#dependency_injection_title}
+# Injectarea dependințelor {#dependency_injection_title}
 
 Din [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
 
-> Injectarea dependintelor este un sablon de proiectare software care permite scoaterea dependintelor hardcodate
-> si face posibila schimbarea lor, fie ca este in timpul compilarii sau in timpul rularii.
+> Injectarea dependințelor este un șablon de proiectare software care permite scoaterea dependințelor hard-codate
+> și face posibilă schimbarea lor, fie că este în timpul compilării sau în timpul rulării.
 
-Acest citat face ca acest concept sa sune mult mai complicat decat este cu adevarat. Injectarea dependintelor pune
-la dispozitia unei componente propriile sale dependinte ori prin injectie in constructor, apel al metodelor
-sau prin setarea proprietatilor. E atat de simplu.
+Acest citat face ca acest concept să sune mult mai complicat decât este cu adevărat. Injectarea dependințelor pune
+la dispoziția unei componente propriile sale dependințe ori prin injecție în constructor, apel al metodelor
+sau prin setarea proprietăților. E atât de simplu.

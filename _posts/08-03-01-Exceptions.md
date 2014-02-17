@@ -2,27 +2,27 @@
 isChild: true
 ---
 
-## Exceptii {#exceptions_title}
+## Excepții {#exceptions_title}
 
-Exceptiile sunt o parte standard a majoritatii marilor limbaje de programare, dar sunt deseori trecute
-cu vederea de catre programatorii PHP.
-Limbaje precum Ruby se bazeaza foarte mult pe exceptii, asa ca oricand se intampla ceva
-gresit precum o interogare HTTP care esueaza, sau o interogare SQL, sau o imagine nu poate
-fi gasita, Ruby (sau gem-ul folosit) va arunca o exceptie pe ecran insemnand ca vei
-stii imediat ca exista o greseala.
+Excepțiile sunt o parte standard a majorității marilor limbaje de programare, dar sunt deseori trecute
+cu vederea de către programatorii PHP.
+Limbaje precum Ruby se bazează foarte mult pe excepții, așa ca oricând se întâmplă ceva
+greșit precum o interogare HTTP care eșuează, sau o interogare SQL, sau o imagine nu poate
+fi găsită, Ruby (sau gem-ul folosit) va arunca o excepție pe ecran însemnând că vei
+știi imediat ca există o greșeală.
 
-PHP este destul de lax in aceasta privinta, iar dupa o apelare la `file_get_contents()` te
-vei alege cu un `FALSE` si o avertizare.
-Multe framework-uri mai vechi precum CodeIgniter vor returna un false, vor scrie un mesaj in
-jurnalul propriu si poate te vor lasa sa folosesti o metoda precum `$this->upload->get_error()`
-ca sa vezi ce s-a petrecut rau. Problema aici este ca tu trebuie sa mergi sa cauti greseala
-si sa verifici documentele sa vezi care este metoda de eroare pentru acea clasa in loc ca ea
-sa fie extrem de evidenta.
+PHP este destul de lax în aceasta privință, iar după o apelare la `file_get_contents()` te
+vei alege cu un `FALSE` și o avertizare.
+Multe framework-uri mai vechi precum Codeinomanie vor returna un false, vor scrie un mesaj în
+jurnalul propriu și poate te vor lăsa să folosești o metodă precum `$this->upload->get_error()`
+ca să vezi ce s-a petrecut rău. Problema aici este ca tu trebuie să mergi să cauți greșeala
+și să verifici documentele să vezi care este metoda de eroare pentru acea clasa în loc ca ea
+să fie extrem de evidentă.
 
-Alta problema este cand clasele arunca o eroare automat pe ecran si opresc procesul.
-Cand faci asta inseamna ca opresti alt programator care s-ar fi ocupat de acea eroare.
-Exceptii ar trebui aruncate pentru a face un programator constient de eroare; apoi el
-va putea sa aleaga cum sa se ocupe. E.g.:
+Altă problemă este când clasele aruncă o eroare automat pe ecran și opresc procesul.
+Când faci asta înseamnă că oprești alt programator care s-ar fi ocupat de acea eroare.
+Excepții ar trebui aruncate pentru a face un programator conștient de eroare; apoi el
+va putea să aleagă cum să se ocupe. E.g.:
 
 {% highlight php %}
 <?php
@@ -37,7 +37,7 @@ try
 }
 catch(Fuel\Email\ValidationFailedException $e)
 {
-    // Validarea a esuat
+    // Validarea a eșuat
 }
 catch(Fuel\Email\SendingFailedException $e)
 {
@@ -45,35 +45,35 @@ catch(Fuel\Email\SendingFailedException $e)
 }
 finally
 {
-    // Executat chiar si daca o exceptie a fost aruncata si inainte ca
-       executia normala sa fie reinceputa
+    // Executat chiar și dacă o excepție a fost aruncată și înainte ca
+       execuția normală să fie reîncepută
 }
 {% endhighlight %}
 
-### Exceptii SPL
+### Excepții SPL
 
-Clasa generica `Exception` pune la dispozitie foarte putina informatie pentru depanare
-pentru dezvoltator; totusi, pentru a remedia asta, este posibil sa creezi o `Exception`
-specializata prin subclasarea genericei `Exception`:
+Clasa generică `Exception` pune la dispoziție foarte puțină informație pentru depanare
+pentru dezvoltator; totuși, pentru a remedia asta, este posibil să creezi o `Exception`
+specializată prin subclasarea genericei `Exception`:
 
 {% highlight php %}
 <?php
 class ValidationException extends Exception {}
 {% endhighlight %}
 
-Asta inseamna ca poti adauga multiple blocuri catch si te poti ocupa de diferite
-Exceptii diferit. Asta poate duce la crearea de mult Exceptii personalizate, unele
-dintre care ar fi putut fi evitate folosind exceptii SPL disponibile in [extensia SPL][splext].
+Asta înseamnă că poți adăuga multiple blocuri catch și te poți ocupa de diferite
+Excepții diferit. Asta poate duce la crearea de mult Excepții personalizate, unele
+dintre care ar fi putut fi evitate folosind excepții SPL disponibile în [extensia SPL][splext].
 
-Daca de exemplu folosesti metoda magica `__call()` si o metoda invalida este ceruta
-atunci in loc de aruncarea unei Exceptii standard, care e vaga, sau crearea unei
-Exceptii personalizate numai pentru asta, ai putea pur si simplu sa
+Dacă de exemplu folosești metoda magică `__call()` și o metodă invalidă este cerută
+atunci în loc de aruncarea unei Excepții standard, care e vagă, sau crearea unei
+Excepții personalizate numai pentru asta, ai putea pur și simplu să
 `throw new BadFunctionCallException;`.
 
-* [Citeste despre Exceptii][exceptions]
-* [Citeste despre Exceptii SPL][splexe]
-* [Stivuirea exceptilor in PHP][nesting-exceptions-in-php]
-* [Bune practici pentru exceptii in PHP 5.3][exception-best-practices53]
+* [Citește despre Excepții][exceptions]
+* [Citește despre Excepții SPL][splexe]
+* [Stivuirea excepțiilor în PHP][nesting-exceptions-in-php]
+* [Bune practici pentru excepții în PHP 5.3][exception-best-practices53]
 
 [exceptions]: http://php.net/manual/ro/language.exceptions.php
 [splexe]: http://php.net/manual/ro/spl.exceptions.php

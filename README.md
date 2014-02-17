@@ -4,72 +4,72 @@
 
 Acesta este repository-ul GitHub Pages pentru proiectul _PHP: The Right Way_.
 
-* Acest website este un Jekyll project.
-* Fiecare sectiune si subsectiune sunt un fisier Markdown in `_posts/`.
-* Subsectiunile au `isChild: true` in "front matter"-ul lor.
-* Structura paginii si a navigatiei este generata automat.
+* Acest website este un proiect Jekyll.
+* Fiecare secțiune și subsecțiune sunt un fișier Markdown în `_posts/`.
+* Subsecțiunile au `isChild: true` în "front matter"-ul lor.
+* Structura paginii și a navigației este generată automat.
 
 ## Du vestea mai departe!
 
-_PHP: The Right Way_ are imagini banner pe care le poti folosi pe websiteul tau. Arata-ti sustinerea si lasa-i pe dezvoltatorii PHP noi sa afle unde sa gaseasca informatii de calitate!
+_PHP: The Right Way_ are imagini banner pe care le poți folosi pe websiteul tău. Arata-ți susținerea și lasă-i pe dezvoltatorii PHP noi să afle unde să găsească informații de calitate!
 
 [Vezi imagini banner](http://www.phptherightway.com/banners.html)
 
-## Cum sa contribui
+## Cum să contribui
 
-1. Fork si editeaza
-2. Instaleaza optional [Ruby](https://rvm.io/rvm/install/) cu gem-ul [Jekyll](https://github.com/mojombo/jekyll/) ca sa previzualizezi local
-3. Depune o cerere pull pentru a fi luata in considerare
+1. Fork și editează
+2. Instalează opțional [Ruby](https://rvm.io/rvm/install/) cu gem-ul [Jekyll](https://github.com/mojombo/jekyll/) ca să previzualizezi local
+3. Depune o cerere pull pentru a fi luata în considerare
 
 ### Ghid de stil pentru contribuitori
 
-1. Foloseste engleza americana (*numai in repo-ul primar englez*)
-2. Foloseste patru(4) spatii pentru ident; nu folosi tab-uri.
-3. Infasoara orice text la 120 de caractere.
+1. Folosește engleza americana (*numai în repo-ul primar englez*)
+2. Folosește patru(4) spatii pentru ident; nu folosi tab-uri.
+3. Înfășoară orice text la 120 de caractere.
 4. Mostrele de cod trebuie sa adere la PSR-1 sau superior.
 
 ## Unde
 
 <http://www.phptherightway.com>
 
-* [Engleza](http://www.phptherightway.com)
-* [Catalana] (http://ca.phptherightway.com)
-* [Chineza](http://wulijun.github.com/php-the-right-way)
-* [Japoneza] (http://ja.phptherightway.com)
-* [Coreana] (http://wafe.github.io/php-the-right-way)
-* [Italiana] (http://it.phptherightway.com)
-* [Poloneza](http://pl.phptherightway.com)
-* [Portugheza](http://br.phptherightway.com)
-* [Rusa] (http://getjump.github.io/ru-php-the-right-way)
-* [Spaniola] (http://es.phptherightway.com)
-* [Ukraineana](http://iflista.github.com/php-the-right-way)
-* [Bulgara](http://bg.phptherightway.com)
-* [Germana] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turca](http://hkulekci.github.io/php-the-right-way/)
+* [Engleză](http://www.phptherightway.com)
+* [Catalană] (http://ca.phptherightway.com)
+* [Chineză](http://wulijun.github.com/php-the-right-way)
+* [Japoneză] (http://ja.phptherightway.com)
+* [Coreeană] (http://wafe.github.io/php-the-right-way)
+* [Italiană] (http://it.phptherightway.com)
+* [Poloneză](http://pl.phptherightway.com)
+* [Portugheză](http://br.phptherightway.com)
+* [Rusă] (http://getjump.github.io/ru-php-the-right-way)
+* [Spaniolă] (http://es.phptherightway.com)
+* [Ucraineană](http://iflista.github.com/php-the-right-way)
+* [Bulgară](http://bg.phptherightway.com)
+* [Germană] (http://rwetzlmayr.github.io/php-the-right-way)
+* [Turcă](http://hkulekci.github.io/php-the-right-way/)
 
 ### Traduceri
 
-Daca esti interesat sa traduci _PHP: The Right Way_, cloneaza acest repo pe Github si publica varianta ta localizata pe propriul tau cont GitHub Pages. Noi vom pune legatura catre traducerea ta in documentul primar.
+Dacă ești interesat să traduci _PHP: The Right Way_, clonează acest repo pe Github și publica varianta ta localizată pe propriul tău cont GitHub Pages. Noi vom pune legătura către traducerea ta în documentul primar.
 
-Pentru a evita fragmentarea si confuzia cititorilor, va rugam algeti una din urmatoarele optiuni:
+Pentru a evita fragmentarea și confuzia cititorilor, vă rugăm alegeți una din următoarele opțiuni:
 
-1. Noi linkam catre fork-ul tau din GitHub Pages cu  `[username].github.com/php-the-right-way`
-2. Noi linkam catre fork-ul tau din GitHub Pages cu un subdomeniu (e.g. "ro.phptherightway.com")
+1. Noi linkăm către fork-ul tău din GitHub Pages cu  `[username].github.com/php-the-right-way`
+2. Noi linkăm către fork-ul tău din GitHub Pages cu un subdomeniu (e.g. "ro.phptherightway.com")
 
 
-Daca folosesti un subdomeniu, introdu subdomeniul in fisierul `CNAME`, si cere-ne sa setam DNS pentru tine. Daca nu utilizezi un subdomeniu sterge fisierul `CNAME` cu totul altfel fork-ul tau nu se va construi cand va fi push-uit.
+Dacă folosești un subdomeniu, introdu subdomeniul în fișierul `CNAME`, și cere-ne să setam DNS pentru tine. Dacă nu utilizezi un subdomeniu șterge fișierul `CNAME` cu totul, altfel fork-ul tău nu se va construi când va fi push-uit.
 
-Cand traducerea ta e gata, deschide un issue pe Issue Tracker.
+Când traducerea ta e gata, deschide un issue pe Issue Tracker.
 
 
 ## De ce
 
-Au avut loc multe discutii in ultima vreme despre cum ca comunitatea PHP nu are suficiente informatii credibile pentru programatorii noi in PHP. Acest repository incearca sa rezolve aceasta problema.
+Au avut loc multe discuții în ultima vreme despre cum că comunitatea PHP nu are suficiente informații credibile pentru programatorii noi în PHP. Acest repository încearcă să rezolve această problemă.
 
 
 ## Cine
 
-Numele meu este [Josh Lockhart](http://twitter.com/codeguy). Sunt autorul [Slim Framework](http://www.slimframework.com/) si lucrez pentru [New Media Campaigns](http://www.newmediacampaigns.com/).
+Numele meu este [Josh Lockhart](http://twitter.com/codeguy). Sunt autorul [Slim Framework](http://www.slimframework.com/) și lucrez pentru [New Media Campaigns](http://www.newmediacampaigns.com/).
 
 
 ### Colaboratori
@@ -77,6 +77,6 @@ Numele meu este [Josh Lockhart](http://twitter.com/codeguy). Sunt autorul [Slim 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## Licenta
+## Licență
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)

@@ -5,12 +5,12 @@ isChild: true
 
 ## Web Server incorporat {#builtin_web_server_title}
 
-Poti incepe sa inveti PHP fara bataia de cap a instalarii unui intreg web server
-(ai nevoie de PHP 5.4+). Pentru a porni serverul, executa urmatoarea comanda
-din terminal in directorul radacina a proiectului tau:
+Poți începe să înveți PHP fără bătaia de cap a instalării unui întreg web server
+(ai nevoie de PHP 5.4+). Pentru a porni serverul, execută urmatoarea comandă
+din terminal în directorul rădăcină a proiectului tău:
 
     > php -S localhost:8000
 
-* [Afla despre web serverul incorporat, de linie de comanda][cli-server]
+* [Află despre web serverul incorporat, de linie de comandă][cli-server]
 
 [cli-server]: http://www.php.net/manual/ro/features.commandline.webserver.php

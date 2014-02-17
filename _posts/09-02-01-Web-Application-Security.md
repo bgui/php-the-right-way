@@ -2,15 +2,15 @@
 isChild: true
 ---
 
-## Securitatea aplicatiilor web {#web_application_security_title}
+## Securitatea aplicațiilor web {#web_application_security_title}
 
-Exista oameni rai gata sa iti exploateze aplicatia web. Este important ca tu sa iei
-precautii necesare pentru a iti intari securitatea aplicatiei. Din fericire, amabilii
-baieti de la [The Open Web Application Security Project][1] (OWASP) au creeat o lista
-larga de probleme cunoscute de securitate si metode de a te proteja impotriva lor.
-Asta este o lectura obligatorie pentru dezvoltatorul constient de riscuri.
+Există oameni răi gata să îți exploateze aplicația web. Este important ca tu să iei
+precauții necesare pentru a îți întări securitatea aplicației. Din fericire, amabilii
+băieți de la [The Open Web Application Security Project][1] (OWASP) au creat o listă
+largă de probleme cunoscute de securitate și metode de a te proteja împotriva lor.
+Asta este o lectură obligatorie pentru dezvoltatorul conștient de riscuri.
 
-* [Citeste ghidul de securitate OWASP][2]
+* [Citește ghidul de securitate OWASP][2]
 
 [1]: https://www.owasp.org/
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
