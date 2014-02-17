@@ -1,2 +1,2 @@
-# Început {#getting_started_title}
+# Început {#inceput_title}
 
