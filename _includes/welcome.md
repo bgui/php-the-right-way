@@ -5,7 +5,7 @@ propagând rele practici și cod nesigur. _PHP: The Right Way_ este o referinț�
 pentru standarde populare de programare PHP, link-uri către tutoriale cu autoritate de pe web și
 ceea ce consideră contributorii ca sunt cele mai bune practici în prezent.
 
-_Nu există o metodă canonică în a folosi PHP_. Acest website țintește să introducă noii
+_Nu există o metodă canonică de a folosi PHP_. Acest website țintește să introducă noii
 dezvoltatori PHP unor noi subiecte pe care poate ei nu le-ar fi descoperit decât prea târziu,
 și dorește să dea profesioniștilor idei proaspete legate de acele subiecte pe care ei le-au
 aplicat de ani de zile fără să le mai reconsidere. Acest website nu iți va spune ce unelte să
@@ -40,7 +40,7 @@ Ajută-ne să facem acest website cea mai bună resursă pentru noii programator
 
 ## Du vestea mai departe!
 
-_PHP: The Right Way_ are imagini banner pe care le poți folosi pe websiteul tău. Arată-ți susținerea și lasă-i pe dezvoltatorii PHP noi să afle unde sa găsească informații de calitate!
+_PHP: The Right Way_ are imagini banner pe care le poți folosi pe websiteul tău. Arată-ți susținerea și ajută-i pe dezvoltatorii PHP noi să afle unde să găsească informații de calitate!
 
 [Vezi imagini banner][2]
 
