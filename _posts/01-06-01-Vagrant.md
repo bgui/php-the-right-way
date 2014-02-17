@@ -14,7 +14,7 @@ Dacă dezvolți pe Windows și lansezi pe Linux (sau orice non-Windows) sau dezv
  [Puppet][puppet] sau [Chef][chef] care să facă asta pentru tine.
 Inițializarea mașinii de bază e o metodă bună de a asigura că mai multe mașini sunt setate într-o manieră identică și
  elimină nevoia de a avea liste cu comenzi de configurare. De asemenea iți poți distruge mașina de bază și o poți
- recrea fără prea mulţi pași manuali fiind astfel ușor de a crea o instalare proaspătă.
+ recrea fără prea mulți pași manuali fiind astfel ușor de a crea o instalare proaspătă.
 
 Vagrant creează directoare comune folosite pentru a păstra în comun codul tău intre gazda și mașina virtuală, însemnând
  ca poți crea și edita fișiere pe mașina gazda și apoi poți rula codul înauntru mașinii virtuale.

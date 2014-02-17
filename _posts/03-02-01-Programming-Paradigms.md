@@ -8,7 +8,7 @@ PHP este un limbaj flexibil, dinamic, care suportă o varietate de tehnici de pr
 notabile fiind adăugarea solidului model orientat obiect în PHP 5.0 (2004), funcțiile anonime și namespace-uri în PHP 5.3
 (2009), traits în PHP 5.4 (2012).
 
-### Programare orientata obiect
+### Programare orientată obiect
 
 PHP are un complet set de funcționalități orientate obiect incluzând suport pentru clase, clase abstracte, interfețe,
 moștenire, constructori, clonare, excepții, și multe altele.
@@ -41,7 +41,7 @@ așa încât ele pot fi folosite interschimbabil cu funcții anonime în aproape
 
 PHP suportă diverse forme de meta-programare prin mecanisme ca Reflection API și Metode Magice. Sunt multe metode
 magice disponibile precum `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. care permit
-dezvoltatorii sa intervină în comportamentul clasei. Programatorii de Ruby spun deseori că în PHP lipsește `method_missing`,
+dezvoltatorilor să intervină în comportamentul clasei. Programatorii de Ruby spun deseori că în PHP lipsește `method_missing`,
 dar aceasta e disponibilă sub forma `__call()` and `__callStatic()`.
 
 * [Citește despre metode magice][magic-methods]
