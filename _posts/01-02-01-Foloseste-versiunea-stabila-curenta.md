@@ -1,5 +1,5 @@
 ---
-title: Folosește versiunea stabilă curentă (5.5)
+title: Foloseste versiunea stabila curenta (5.5)
 isChild: true
 ---
 
