@@ -1,19 +1,19 @@
 # Bine ai venit
 
-Există multă informație perimată existentă pe Web care induce noii utilizatori PHP în eroare,
+Există multă informație perimată pe Web care induce noii utilizatori PHP în eroare,
 propagând rele practici și cod nesigur. _PHP: The Right Way_ este o referință rapidă și ușor de citit,
-pentru standarde populare de programare PHP, link-uri către tutoriale cu autoritate de pe web și
+pentru standarde populare de programare PHP, cu link-uri către tutoriale cu autoritate de pe web și
 ceea ce consideră contributorii ca sunt cele mai bune practici în prezent.
 
-_Nu există o metodă canonică de a folosi PHP_. Acest website țintește să introducă noii
-dezvoltatori PHP unor noi subiecte pe care poate ei nu le-ar fi descoperit decât prea târziu,
-și dorește să dea profesioniștilor idei proaspete legate de acele subiecte pe care ei le-au
+_Nu există o metodă canonică (standard) de a folosi PHP_. Acest website țintește să expuna noii
+dezvoltatori PHP unor noi subiecte, pe care poate ei nu le-ar fi descoperit decât prea târziu,
+și dorește să transmită profesioniștilor idei proaspete legate de acele subiecte pe care ei le-au
 aplicat de ani de zile fără să le mai reconsidere. Acest website nu iți va spune ce unelte să
-folosești dar iți va oferi sugestii de opțiuni, explicând când se poate diferențele de abordare
-și cazuri de utilizare.
+folosești, dar iți va oferi sugestii de opțiuni, explicând, când se poate, diferențele de abordare
+și cazurile de utilizare.
 
-Acesta este un document "viu" și va continua să fie actualizat cu exemple și informații și mai utile
-pe măsură ce ele devin disponibile.
+Acesta este un document "viu" și va continua să fie actualizat cu mai multe exemple și informații
+utile pe măsură ce ele devin disponibile.
 
 ## Traduceri
 
@@ -33,6 +33,7 @@ _PHP: The Right Way_ e (sau va fi curând) tradus în diferite limbi:
 * [Bulgară](http://bg.phptherightway.com/)
 * [Germană](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turcă](http://hkulekci.github.io/php-the-right-way/)
+* [Română](<Put link here>)
 
 ## Cum să contribui
 

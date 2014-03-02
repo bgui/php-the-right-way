@@ -4,21 +4,18 @@ isChild: true
 
 ## Dezvoltare centrata pe comportament {#behavior_driven_development_title}
 
-Exista doua tipuri diferite de dezvoltare centrata pe comportament (BDD): SpecBDD și StoryBDD.
-SpecBDD se concentrează pe comportamentul tehnic al codului, în timp ce StoryBDD se
-concentrează pe business sau pe comportamentul funcționalităților sau interacțiunilor.
-Exista framework-uri PHP pentru ambele tipuri de BDD.
+Exista doua tipuri diferite de dezvoltare centrata pe comportament (BDD): SpecBDD și StoryBDD. SpecBDD se concentrează
+pe comportamentul tehnic al codului, în timp ce StoryBDD se concentrează pe business sau comportamentul
+funcționalităților sau pe comportamentul interacțiunilor. Exista framework-uri PHP pentru ambele tipuri de BDD.
 
-Cu StoryBDD, tu scrii povestioare citibile de om, care descriu comportamentul aplicației tale.
-Aceste povestioare pot fi apoi rulate ca teste efective asupra aplicației tale. Framework-ul
-folosit în aplicații PHP pentru StoryBDD este Behat, care este inspirat de proiectul
-[Cucumber](http://cukes.info/) din Ruby, și care implementează Gherkin DSL pentru
+Cu StoryBDD, tu scrii povestioare citibile de om, care descriu comportamentul aplicației tale. Aceste povestioare pot fi
+apoi rulate ca teste efective asupra aplicației tale. Framework-ul folosit în aplicații PHP pentru StoryBDD este Behat,
+care este inspirat de proiectul [Cucumber](http://cukes.info/) din Ruby, și care implementează Gherkin DSL pentru
 descrierea comportamentului funcționalităților.
 
-Cu SpecBDD, poți scrie specificații care descriu cum propriul cod trebuie să se comporte.
-În loc de a testa o funcție sau o metodă, tu descrii cum acea funcție sau metodă ar trebui să
-se comporte. PHP oferă framework-ul PHPSpec pentru aceasta. Acest framework este inspirat de
-proiectul [RSpec](http://rspec.info/) pentru Ruby.
+Cu SpecBDD, poți scrie specificații care descriu cum propriul cod trebuie să se comporte. În loc de a testa o funcție
+sau o metodă, tu descrii cum acea funcție sau metodă ar trebui să se comporte. PHP oferă framework-ul PHPSpec pentru
+aceasta. Acest framework este inspirat de proiectul [RSpec](http://rspec.info/) pentru Ruby.
 
 ### BDD Links
 

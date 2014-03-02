@@ -5,30 +5,31 @@ isChild: true
 ## Paradigme {#paradigme_de_programare_title}
 
 PHP este un limbaj flexibil, dinamic, care suportă o varietate de tehnici de programare. A evoluat dramatic peste ani,
-notabile fiind adăugarea solidului model orientat obiect în PHP 5.0 (2004), funcțiile anonime și namespace-uri în PHP 5.3
-(2009), traits în PHP 5.4 (2012).
+notabile fiind adăugarea solidului model orientat pe obiect în PHP 5.0 (2004), funcțiile anonime și namespace-uri în PHP
+5.3 (2009), traits în PHP 5.4 (2012).
 
-### Programare orientată obiect
+### Programare orientată pe obiecte
 
-PHP are un complet set de funcționalități orientate obiect incluzând suport pentru clase, clase abstracte, interfețe,
+PHP are un complet set de funcționalități orientate pe obiect incluzând suport pentru clase, clase abstracte, interfețe,
 moștenire, constructori, clonare, excepții, și multe altele.
 
-* [Citește despre PHP orientat-obiect][oop]
+* [Citește despre PHP programarea orientată pe obiecte][oop]
 * [Citește despre traits][traits]
 
 ### Programare funcțională
 
-PHP suporta funcții de "prima mână", asta însemnând ca o funcție poate fi asignată unei variabile. Atât funcții
+PHP suporta funcții de "prima mână", asta însemnând ca o funcție poate fi asignată unei variabile. Atât funcțiile
 definite de utilizator cat și cele definite de limbaj pot fi referențiate de o variabilă și invocate dinamic. Funcțiile
-pot fi furnizate ca argument către alte funcții (funcționalitate denumită funcții de "Înalt Nivel") sau pot returna alte funcții.
+pot fi furnizate ca argument către alte funcții (funcționalitate denumită funcții de "Înalt Nivel") sau pot returna alte
+funcții.
 
 Recursivitatea, o funcționalitate care permite unei funcții să se auto-apeleze este suportată de limbaj, dar majoritatea
 codului PHP se concentrează pe iterație.
 
 Noile funcții anonime (cu suport pentru closures) sunt prezente începând cu PHP 5.3 (2009).
 
-PHP 5.4 a adăugat abilitatea de a lega closure-uri de scope-ul obiectului și suport îmbunătățit pentru callables
-așa încât ele pot fi folosite interschimbabil cu funcții anonime în aproape orice caz.
+PHP 5.4 a adăugat abilitatea de a lega closure-uri de scope-ul obiectului și suport îmbunătățit pentru callables așa
+încât ele pot fi folosite interschimbabil cu funcții anonime în aproape orice caz.
 
 * Continuă să citești pe [Programare functionala in PHP](/pages/Functional-Programming.html)
 * [Citește despre funcții anonime][anonymous-functions]
@@ -39,10 +40,10 @@ așa încât ele pot fi folosite interschimbabil cu funcții anonime în aproape
 
 ### Meta programare
 
-PHP suportă diverse forme de meta-programare prin mecanisme ca Reflection API și Metode Magice. Sunt multe metode
-magice disponibile precum `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. care permit
-dezvoltatorilor să intervină în comportamentul clasei. Programatorii de Ruby spun deseori că în PHP lipsește `method_missing`,
-dar aceasta e disponibilă sub forma `__call()` and `__callStatic()`.
+PHP suportă diverse forme de meta-programare prin mecanisme ca Reflection API și Metode Magice. Sunt multe metode magice
+disponibile precum `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. care permit dezvoltatorilor să
+intervină în comportamentul clasei. Programatorii de Ruby spun deseori că în PHP lipsește `method_missing`, dar aceasta
+e disponibilă sub forma `__call()` and `__callStatic()`.
 
 * [Citește despre metode magice][magic-methods]
 * [Citește despre Reflecție][reflection]
