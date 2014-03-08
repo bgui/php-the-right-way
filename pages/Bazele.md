@@ -7,9 +7,8 @@ title: Bazele
 
 ## Operatori de comparație
 
-Operatorii de comparație sunt un aspect deseori trecut cu vederea în PHP, lucru care poate
-duce la situații neprevazute. O asemenea problemă izvorăște din comparații stricte
-(comparația booleană sau a integer-ilor).
+Operatorii de comparație sunt un aspect deseori trecut cu vederea în PHP, lucru care poate duce la situații neprevazute.
+O asemenea problemă izvorăște din comparații stricte (comparația booleană sau a integer-ilor).
 
 {% highlight php %}
 <?php
@@ -41,10 +40,9 @@ if (strpos('testing', 'test') !== false) {    // true, întrucât o comparație 
 
 ### Instrucțiuni If
 
-Când folosești instrucțiuni 'if/else' într-o funcție sau clasă, există concepția greșită
-că și 'else' trebuie folosit pentru a declara rezultate potențiale. Totuși dacă rezultatul
-este de a defini valoarea de return, 'else' nu e necesar întrucât return va întrerupe funcția,
-cauzând 'else' să devina superfluă.
+Când folosești instrucțiuni 'if/else' într-o funcție sau clasă, există concepția greșită că și 'else' trebuie folosit
+pentru a declara rezultate potențiale. Totuși dacă rezultatul este de a defini valoarea de return, 'else' nu e necesar
+întrucât return va întrerupe funcția, făcând ca 'else' să devina inutil.
 
 {% highlight php %}
 <?php
@@ -72,12 +70,12 @@ function test($a)
 
 ### Instrucțiuni switch
 
-Instrucțiunile switch sunt o bună metodă de a evita să tastezi if-uri și elseif-uri la nesfârșit,
-dar cu câteva condiții de reținut:
+Instrucțiunile switch sunt o bună metodă de a evita să tastezi if-uri și elseif-uri la nesfârșit, dar cu câteva condiții
+de reținut:
 - Instrucțiunile switch compară numai valori, și nu tipul (echivalentul lui '==')
-- Ele iterează caz după caz pană ce o potrivire este găsită. Dacă nici o potrivire nu e
-găsită, atunci default-ul este folosit (dacă e definit)
-- Fara un 'break', vor continua să implementeze fiecare caz pana ce ating un break/return
+- Ele iterează caz după caz pană ce o potrivire este găsită. Dacă nici o potrivire nu e găsită, atunci default-ul este
+  folosit (dacă e definit)
+- Fara un 'break', vor continua să "parcurgă" fiecare caz până ce ating un break/return
 - Într-o funcție, folosirea lui 'return' suplinește nevoia de a folosi 'break' întrucât opreste funcția
 
 {% highlight php %}
@@ -107,9 +105,8 @@ function test($a)
 
 ## Namespace-ul global
 
-Când folosești namespace-uri(spatii de nume), poți descoperi că funcții interne au fost ascunse
-de funcții scrise de tine. Pentru a repara asta te poți referi la funcția globală folosind
-un backslash înainte de numele funcției.
+Când folosești namespace-uri(spatii de nume), poți descoperi că funcții interne au fost ascunse de funcții scrise de
+tine. Pentru a repara asta te poți referi la funcția globală folosind un backslash înainte de numele funcției.
 
 {% highlight php %}
 <?php
@@ -138,8 +135,7 @@ function array()
 
 - Dacă linia ta se extinde dincolo de lungimea recomandata(120 de caractere). consideră concatenarea ei.
 - Pentru o citire mai ușoară este bine să folosești operatorii de concatenare și nu operatorii de asignare concatenare
-- Pe când ești înăuntrul scope-ului original al variabilei, ident-ează atunci când concatenarea
-folosește un nou rând
+- Pe când ești înăuntrul scope-ului original al variabilei, ident-ează atunci când concatenarea folosește un nou rând
 
 {% highlight php %}
 <?php
@@ -158,14 +154,13 @@ $a = 'Multi-line example'      // operator de concatenare (.)
 
 ### Tipuri de stringuri
 
-Tipurile de stringuri sunt o funcționalitate constantă în comunitatea PHP, dar sperăm că aceasta secțiune
-va explica diferențele dintre tipurile de stringuri și beneficiile/utilizările lor.
+Tipurile de stringuri sunt o funcționalitate constantă în comunitatea PHP, dar sperăm că aceasta secțiune va explica
+diferențele dintre tipurile de stringuri și beneficiile/utilizările lor.
 
 #### Ghilimele simple
 
-Ghilimelele simple sunt cea mai simplă cale de a defini un string și deseori cea mai rapidă.
-Viteza lor pornește din faptul că PHP nu parsează string-ul (nu parsează după variabile).
-Sunt cele potrivite pentru:
+Ghilimelele simple sunt cea mai simplă cale de a defini un string și deseori cea mai rapidă. Viteza lor pornește din
+faptul că PHP nu parsează string-ul (nu parsează după variabile). Sunt cele potrivite pentru:
 
 - String-uri care nu vor fi parsate
 - Scrierea unei variabile în text obișnuit
@@ -185,8 +180,8 @@ echo 'Acesta este string-ul meu, privește ce frumos este el.';    // nu e nevoi
 
 #### Ghilimele duble
 
-Ghilimelele duble sunt briceagul string-urilor, dar sunt mai lente datorită faptului că string-ul este
-parsat. Sunt cele mai potrivite pentru:
+Ghilimelele duble sunt briceagul string-urilor, dar sunt mai lente datorită faptului că string-ul este parsat. Sunt cele
+mai potrivite pentru:
 
 - String-uri escape-uite
 - Stringuri cu variabile multiple și text simplu
@@ -204,9 +199,9 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // În loc de con
                                                                // duble ne permit să folosim un string parsabil
 {% endhighlight %}
 
-Când folosim ghilimele duble care conțin variabile, deseori se poate întâmpla că variabila să atingă
-alt caracter. Asta va rezulta în incapacitatea PHP de a parsa variabila întrucât e camuflata. Pentru
-a repara aceasta problema, înfășoară variabila cu o pereche de acolade.
+Când folosim ghilimele duble care conțin variabile, deseori se poate întâmpla că variabila să atingă alt caracter. Asta
+va rezulta în incapacitatea PHP de a parsa variabila întrucât e camuflata. Pentru a repara aceasta problema, înfășoară
+variabila cu o pereche de acolade.
 
 {% highlight php %}
 <?php
@@ -230,8 +225,8 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] va fi parsat
 
 #### Sintaxa Nowdoc
 
-Sintaxa Nowdoc a fost introdusă în 5.3 și intern se comportă la fel că și ghilimelele simple cu
-excepția că este menit pentru string-urile multi-rand fără nevoia de a concatena.
+Sintaxa Nowdoc a fost introdusă în 5.3 și intern se comportă la fel că și ghilimelele simple cu excepția că este menit
+pentru string-urile multi-rand fără nevoia de a concatena.
 
 {% highlight php %}
 <?php
@@ -256,8 +251,8 @@ EOD;                        // 'EOD' de închidere trebuie să fie pe propriul r
 
 #### Sintaxa Heredoc
 
-Sintaxa Heredoc se comportă intern că și ghilimelele duble cu excepția că este menit pentru uzul
-string-urilor de mai multe rânduri fără să fie nevoie de concatenare.
+Sintaxa Heredoc se comportă intern că și ghilimelele duble cu excepția că este menit pentru uzul string-urilor de mai
+multe rânduri fără să fie nevoie de concatenare.
 
 {% highlight php %}
 <?php
@@ -284,9 +279,8 @@ EOD;                        // 'EOD' de închidere trebuie să fie pe propriul r
 
 ## Operatori ternari
 
-Operatorii ternari sunt o buna cale de a condensa cod, dar deseori sunt folosiți în exces.
-Deși operatorii ternari pot fi stivuiți/cuibăriți, este recomandat să fie folosiți unul
-pe rând pentru lizibilitate.
+Operatorii ternari sunt o buna cale de a condensa cod, dar deseori sunt folosiți în exces. Deși operatorii ternari pot
+fi stivuiți/cuibăriți, este recomandat să fie folosiți unul pe rând pentru lizibilitate.
 
 {% highlight php %}
 <?php
@@ -317,10 +311,9 @@ return ($a == 5) ? 'yay' : 'nope';    // acest exemplu va returna 'yay'
 
 ## Declarații de variabile
 
-Uneori, programatorii încearcă să își facă codul "mai clar" declarând variabile predefinite cu un alt nume.
-Ceea ce face asta în realitate este de a dubla consumul de memorie al respectivului script.
-Pentru exemplul de mai jos, să zicem un string exemplu conține 1MB de date, copiind variabila ai
-incrementat execuția scriptului la 2MB.
+Uneori, programatorii încearcă să își facă codul "mai clar" declarând variabile predefinite cu un alt nume. Ceea ce face
+asta în realitate este de a dubla consumul de memorie al respectivului script. Pentru exemplul de mai jos, să zicem un
+string exemplu conține 1MB de date, copiind variabila ai incrementat execuția scriptului la 2MB.
 
 {% highlight php %}
 <?php
