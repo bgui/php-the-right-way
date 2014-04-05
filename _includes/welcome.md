@@ -33,7 +33,7 @@ _PHP: The Right Way_ e (sau va fi curând) tradus în diferite limbi:
 * [Bulgară](http://bg.phptherightway.com/)
 * [Germană](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turcă](http://hkulekci.github.io/php-the-right-way/)
-* [Română](<Put link here>)
+* [Română](http://bgui.github.io/php-the-right-way/)
 
 ## Cum să contribui
 
